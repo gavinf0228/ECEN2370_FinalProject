@@ -6,6 +6,7 @@
  */
 
 #include "LCD_Driver.h"
+#include "GamePiece.h"
 #include "stm32f4xx_hal.h"
 
 #include <stdio.h>
@@ -16,6 +17,8 @@
 
 void ApplicationInit(void);
 void LCD_Visual_Demo(void);
+void InitGameplay();
+void movementtest();
 
 #if (COMPILE_TOUCH_FUNCTIONS == 1)
 void LCD_Touch_Polling_Demo(void);

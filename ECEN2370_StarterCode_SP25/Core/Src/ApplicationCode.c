@@ -35,7 +35,19 @@ void ApplicationInit(void)
 
 void LCD_Visual_Demo(void)
 {
-	visualDemo();
+	//  ScreenStart();
+	// HAL_Delay(3000);
+	// ScreenPlay();
+	// visualDemo();
+}
+
+void InitGameplay(){
+	ScreenStart();
+	InitGamePiece();
+}
+
+void movementtest(){
+	GamePieceMovement();
 }
 
 #if COMPILE_TOUCH_FUNCTIONS == 1

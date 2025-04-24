@@ -1,0 +1,5 @@
+../Core/Src/GamePiece.c:6:6:InitGamePiece	1
+../Core/Src/GamePiece.c:13:6:GamePieceLeft	1
+../Core/Src/GamePiece.c:22:6:GamePieceRight	1
+../Core/Src/GamePiece.c:31:6:GamePieceMovement	4
+../Core/Src/GamePiece.c:45:6:DrawGamePiece	1

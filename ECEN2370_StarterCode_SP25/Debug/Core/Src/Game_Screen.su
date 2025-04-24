@@ -1,0 +1,3 @@
+../Core/Src/Game_Screen.c:3:6:GameDrawBoard	48	static
+../Core/Src/Game_Screen.c:41:6:ScreenStart	16	static
+../Core/Src/Game_Screen.c:79:6:ScreenPlay	8	static
