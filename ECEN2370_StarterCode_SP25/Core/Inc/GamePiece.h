@@ -1,6 +1,9 @@
 #include "Game_Screen.h"
 #define MOVE_DISTANCE   30
 #define PIECE_RADIUS    10
+#define PIECESPACING   MOVE_DISTANCE
+#define CENTERCOLUMN    30
+#define ROWSTART        120
 
 void InitGamePiece();
 void GamePieceLeft();
@@ -8,4 +11,4 @@ void GamePieceRight();
 void GamePieceMovement();
 void DrawGamePiece();
 void DropGamePiece();
-void IndicateTurn();
+uint16_t GetPieceData(uint16_t piecepos);
