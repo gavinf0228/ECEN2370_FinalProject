@@ -1,7 +1,7 @@
 ../Core/Src/GamePiece.c:8:6:InitGamePiece	3
-../Core/Src/GamePiece.c:26:6:GamePieceLeft	3
-../Core/Src/GamePiece.c:40:6:GamePieceRight	3
-../Core/Src/GamePiece.c:54:6:GamePieceMovement	10
-../Core/Src/GamePiece.c:71:6:DrawGamePiece	1
-../Core/Src/GamePiece.c:75:6:DropGamePiece	4
-../Core/Src/GamePiece.c:97:10:GetPieceData	3
+../Core/Src/GamePiece.c:24:6:GamePieceLeft	3
+../Core/Src/GamePiece.c:38:6:GamePieceRight	3
+../Core/Src/GamePiece.c:52:6:GamePieceMovement	10
+../Core/Src/GamePiece.c:69:6:DrawGamePiece	1
+../Core/Src/GamePiece.c:73:6:DropGamePiece	4
+../Core/Src/GamePiece.c:96:10:GetPieceData	3

@@ -103,10 +103,12 @@ void ScreenPlay(){
     LCD_SetTextColor(LCD_COLOR_BLACK);
 
     LCD_DisplayChar(10, 10, 'P'); LCD_DisplayChar(26, 10, 'L'); LCD_DisplayChar(42, 10, 'A'); LCD_DisplayChar(58, 10, 'Y');
-    LCD_DisplayChar(74, 10, 'E'); LCD_DisplayChar(90, 10, 'R');LCD_DisplayChar(106, 10, ' '); LCD_DisplayChar(122, 10, '1');
+    LCD_DisplayChar(74, 10, 'E'); LCD_DisplayChar(90, 10, 'R');LCD_DisplayChar(106, 10, ' '); LCD_DisplayChar(114, 10, '1');
+    LCD_Draw_Circle_Fill(130, 15, 5, LCD_COLOR_RED);
 
     LCD_DisplayChar(10, 40, 'P'); LCD_DisplayChar(26, 40, 'L');  LCD_DisplayChar(42, 40, 'A'); LCD_DisplayChar(58, 40, 'Y');
-    LCD_DisplayChar(74, 40, 'E'); LCD_DisplayChar(90, 40, 'R');  LCD_DisplayChar(106, 40, ' '); LCD_DisplayChar(122, 40, '2');
+    LCD_DisplayChar(74, 40, 'E'); LCD_DisplayChar(90, 40, 'R');  LCD_DisplayChar(106, 40, ' '); LCD_DisplayChar(114, 40, '2');
+    LCD_Draw_Circle_Fill(130, 45, 5, LCD_COLOR_YELLOW);
 
     // LCD_Draw_Circle_Fill()
     NewGame();

@@ -72,6 +72,7 @@ void DrawGamePiece(){
 
 void DropGamePiece(){
     int pos = GetPieceData(XPos);
+    LCD_Draw_Circle_Fill(XPos, YPos, PIECE_RADIUS, LCD_COLOR_BLUE2); // clears piece when its dropped
     for (int i = ROWS -1; i >= 0; i--){ //start bottom left and iterate up to determine if piece is there or not
         if (boardspots[i][pos] == CLEARED){
             boardspots[i][pos] = currentplayer;
