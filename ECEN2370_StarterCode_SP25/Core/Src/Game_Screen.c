@@ -1,14 +1,35 @@
 #include "Game_Screen.h"
 
-void GameDrawBoard(){
+BoardSettings boardspots[ROWS][COLUMNS];
 
-    for (int r = 0; r < ROWS; ++r) {
-        for (int c = 0; c < COLUMNS; ++c) {
-            uint16_t x = 30 + c *30;
-            uint16_t y = 120 + r * 30;
-            LCD_Draw_Circle_Fill(x, y, 10, LCD_COLOR_WHITE);
+void NewGame(){
+    for (int r = 0; r < ROWS; r++){
+        for (int c = 0; c < COLUMNS; c++) {
+            boardspots[r][c] = CLEARED;
         }
     }
+}
+
+void Drawboard(){
+    for (int r = 0; r < ROWS; r++){
+        for (int c = 0; c < COLUMNS; c++){
+            uint16_t x = 30 + c * 30;
+            uint16_t y = 120 + r * 30;
+            uint16_t color;
+            switch (boardspots[r][c]){
+                case CLEARED: color = LCD_COLOR_WHITE;
+                    break;
+                case YELLOW: color = LCD_COLOR_YELLOW;
+                    break;
+                case RED: color = LCD_COLOR_RED;
+                    break;
+            }
+            LCD_Draw_Circle_Fill(x, y, 10, color);
+        }
+    }
+}
+void GameBoardGrid(){
+
     uint16_t board_left = 30 - 12;
     uint16_t board_right = 30 + (COLUMNS - 1) * 30 + 12;
     uint16_t board_top = 120 - 12;
@@ -88,6 +109,7 @@ void ScreenPlay(){
     LCD_DisplayChar(74, 40, 'E'); LCD_DisplayChar(90, 40, 'R');  LCD_DisplayChar(106, 40, ' '); LCD_DisplayChar(122, 40, '2');
 
     // LCD_Draw_Circle_Fill()
-
-    GameDrawBoard();
+    NewGame();
+    Drawboard();
+    GameBoardGrid();
 }

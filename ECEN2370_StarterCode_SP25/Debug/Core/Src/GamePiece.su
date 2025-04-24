@@ -1,5 +1,5 @@
-../Core/Src/GamePiece.c:6:6:InitGamePiece	8	static
-../Core/Src/GamePiece.c:13:6:GamePieceLeft	8	static
-../Core/Src/GamePiece.c:22:6:GamePieceRight	8	static
-../Core/Src/GamePiece.c:31:6:GamePieceMovement	16	static
-../Core/Src/GamePiece.c:45:6:DrawGamePiece	8	static
+../Core/Src/GamePiece.c:8:6:InitGamePiece	8	static
+../Core/Src/GamePiece.c:22:6:GamePieceLeft	8	static
+../Core/Src/GamePiece.c:31:6:GamePieceRight	8	static
+../Core/Src/GamePiece.c:40:6:GamePieceMovement	16	static
+../Core/Src/GamePiece.c:54:6:DrawGamePiece	8	static

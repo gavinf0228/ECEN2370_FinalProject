@@ -1,3 +1,5 @@
-../Core/Src/Game_Screen.c:3:6:GameDrawBoard	7
-../Core/Src/Game_Screen.c:41:6:ScreenStart	10
-../Core/Src/Game_Screen.c:79:6:ScreenPlay	1
+../Core/Src/Game_Screen.c:5:6:NewGame	3
+../Core/Src/Game_Screen.c:13:6:Drawboard	7
+../Core/Src/Game_Screen.c:31:6:GameBoardGrid	5
+../Core/Src/Game_Screen.c:62:6:ScreenStart	10
+../Core/Src/Game_Screen.c:100:6:ScreenPlay	1

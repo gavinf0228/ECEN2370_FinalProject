@@ -12,11 +12,13 @@ typedef enum {
     CLEARED,
     YELLOW,
     RED,
-}Board_TypeDef_t;
+}BoardSettings;
 
-Board_TypeDef_t boardspots[ROWS][COLUMNS];
+extern BoardSettings boardspots[ROWS][COLUMNS];
 
-void GameDrawBoard();
+void NewGame();
+void Drawboard();
+void GameBoardGrid();
 void ScreenStart();
 void ScreenPlay();
 void ScreenEnd();

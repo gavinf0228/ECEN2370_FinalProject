@@ -3,6 +3,7 @@
     "files.associations": {
         "lcd_driver.h": "c",
         "stmpe811.h": "c",
-        "fonts.h": "c"
+        "fonts.h": "c",
+        "game_screen.h": "c"
     }
 }

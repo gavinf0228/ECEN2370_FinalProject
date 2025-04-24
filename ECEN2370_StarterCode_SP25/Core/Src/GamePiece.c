@@ -1,11 +1,12 @@
 #include "GamePiece.h"
+
 static uint16_t XPos;
 static uint16_t YPos;
 static uint16_t FillColor;
 bool Player1;
 
 void InitGamePiece(){
-    if (Player 1 == true){
+    if (Player1 == true){
         FillColor = LCD_COLOR_YELLOW;
         XPos = LCD_PIXEL_WIDTH / 2;
         YPos = LCD_PIXEL_HEIGHT / 4;
