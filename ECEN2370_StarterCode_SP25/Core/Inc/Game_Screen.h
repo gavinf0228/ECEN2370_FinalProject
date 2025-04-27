@@ -16,6 +16,7 @@ typedef enum {
 
 extern BoardSettings boardspots[ROWS][COLUMNS];
 
+
 void NewGame();
 void Drawboard();
 void GameBoardGrid();

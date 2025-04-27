@@ -74,9 +74,9 @@ void DropGamePiece(){
     int pos = GetPieceData(XPos);
     LCD_Draw_Circle_Fill(XPos, YPos, PIECE_RADIUS, LCD_COLOR_BLUE2); // clears piece when its dropped
     for (int i = ROWS -1; i >= 0; i--){ //start bottom left and iterate up to determine if piece is there or not
-        if (boardspots[i][pos] == CLEARED){
+        if (boardspots[i][pos] == CLEARED){ //if spot is empty then first empty spot from bottom is where new piece placed
             boardspots[i][pos] = currentplayer;
-            uint16_t x = CENTERCOLUMN + pos * PIECESPACING;
+            uint16_t x = CENTERCOLUMN + pos * PIECESPACING; 
             uint16_t y = ROWSTART + i * PIECESPACING;
 
             if (currentplayer == YELLOW){
@@ -84,6 +84,7 @@ void DropGamePiece(){
             } else {
                 LCD_Draw_Circle_Fill(x, y, PIECE_RADIUS, LCD_COLOR_RED);
             }
+            CheckWin();
             Player1 = !Player1; //switch to player two
             InitGamePiece();
             break;
@@ -94,7 +95,7 @@ void DropGamePiece(){
 
 // this gets the pixel position of the gamepiece. Used to track data for win
 uint16_t GetPieceData(uint16_t piecepos){
-    int pos = (piecepos - 15) / PIECESPACING;
+    int pos = (piecepos - CENTERPIECE_IFOFF) / PIECESPACING;
 
     if (pos < 0){
         pos = 0;
@@ -103,3 +104,126 @@ uint16_t GetPieceData(uint16_t piecepos){
     }
     return pos;
 }
+
+// semi brute force way of checking for wins
+void CheckWin() {
+    if (currentplayer == YELLOW) {
+        for (int i = 0; i < ROWS; i++) { //iterate through rows
+            for (int j = 0; j < COLUMNS; j++) { //iterate through columns
+                if(i+3 < ROWS){ // checks for below placed piece
+                    if(boardspots[i][j] == 1 &&
+                    boardspots[i+1][j] == 1 &&
+                    boardspots[i+2][j] == 1 &&
+                    boardspots[i+3][j] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                } if (i-3 >= 0){ // checks above placed piece
+                    if(boardspots[i][j] == 1 &&
+                    boardspots[i-1][j] == 1 &&
+                    boardspots[i-2][j] == 1 &&
+                    boardspots[i-3][j] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                } if (j +3 < COLUMNS) { //checks right of placed piece
+                    if (boardspots[i][j] == 1 &&
+                    boardspots[i][j+1] == 1 &&
+                    boardspots[i][j+2] == 1 &&
+                    boardspots[i][j+3] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                } if (j -3 >= 0) { // checks left of placed piece
+                    if (boardspots[i][j] == 1 &&
+                    boardspots[i][j-1] == 1 &&
+                    boardspots[i][j-2] == 1 &&
+                    boardspots[i][j-3] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                } if ((i + 3 < ROWS) && (j + 3 < COLUMNS)){ //checks diagonally down right 
+                    if (boardspots[i][j] == 1 &&
+                    boardspots[i+1][j+1] == 1 &&
+                    boardspots[i+2][j+2] == 1 &&
+                    boardspots[i+3][j+3] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                } if ((i -3 >= 0) && (j+3 < COLUMNS)){ // checks diagonally up right
+                    if (boardspots[i][j] == 1 &&
+                    boardspots[i-1][j+1] == 1 &&
+                    boardspots[i-2][j+2] == 1 &&
+                    boardspots[i-3][j+3] == 1){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_YELLOW);
+                        return;
+                    }
+                }
+            }
+        }
+    } else if(currentplayer == RED){ //same code as if current player is yellow. just for red player now
+        for (int k = 0; k < ROWS; k++) {
+            for (int l = 0; l < COLUMNS; l++) {
+                if(k+3 < ROWS){
+                    if(boardspots[k][l] == 2 &&
+                    boardspots[k+1][l] == 2 &&
+                    boardspots[k+2][l] == 2 &&
+                    boardspots[k+3][l] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                } if (k-3 >= 0){
+                    if(boardspots[k][l] == 2 &&
+                    boardspots[k-1][l] == 2 &&
+                    boardspots[k-2][l] == 2 &&
+                    boardspots[k-3][l] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                }if (l +3 < COLUMNS) {
+                    if (boardspots[k][l] == 2 &&
+                    boardspots[k][l+1] == 2 &&
+                    boardspots[k][l+2] == 2 &&
+                    boardspots[k][l+3] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                } if (l -3 >= 0) {
+                    if (boardspots[k][l] == 2 &&
+                    boardspots[k][l-1] == 2 &&
+                    boardspots[k][l-2] == 2 &&
+                    boardspots[k][l-3] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                } if ((k + 3 < ROWS) && (l + 3 < COLUMNS)){
+                    if (boardspots[k][l] == 2 &&
+                    boardspots[k][l+1] == 2 &&
+                    boardspots[k][l+2] == 2 &&
+                    boardspots[k][l+3] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    } 
+                } if ((k + 3 < ROWS) && (l + 3 < COLUMNS)){ //checks diagonally down right 
+                    if (boardspots[k][l] == 2 &&
+                    boardspots[k+1][l+1] == 2 &&
+                    boardspots[k+2][l+2] == 2 &&
+                    boardspots[k+3][l+3] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                } if ((k -3 >= 0) && (l+3 < COLUMNS)){
+                    if (boardspots[k][l] == 2 &&
+                    boardspots[k-1][l+1] == 2 &&
+                    boardspots[k-2][l+2] == 2 &&
+                    boardspots[k-3][l+3] == 2){
+                        LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

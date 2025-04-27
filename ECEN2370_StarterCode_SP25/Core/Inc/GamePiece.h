@@ -4,6 +4,7 @@
 #define PIECESPACING   MOVE_DISTANCE
 #define CENTERCOLUMN    30
 #define ROWSTART        120
+#define CENTERPIECE_IFOFF   15
 
 void InitGamePiece();
 void GamePieceLeft();
@@ -12,3 +13,4 @@ void GamePieceMovement();
 void DrawGamePiece();
 void DropGamePiece();
 uint16_t GetPieceData(uint16_t piecepos);
+void CheckWin();

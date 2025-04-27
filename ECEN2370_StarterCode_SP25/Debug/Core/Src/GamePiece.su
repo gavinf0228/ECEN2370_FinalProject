@@ -4,4 +4,5 @@
 ../Core/Src/GamePiece.c:52:6:GamePieceMovement	16	static
 ../Core/Src/GamePiece.c:69:6:DrawGamePiece	8	static
 ../Core/Src/GamePiece.c:73:6:DropGamePiece	24	static
-../Core/Src/GamePiece.c:96:10:GetPieceData	24	static
+../Core/Src/GamePiece.c:97:10:GetPieceData	24	static
+../Core/Src/GamePiece.c:109:6:CheckWin	24	static

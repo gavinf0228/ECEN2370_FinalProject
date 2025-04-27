@@ -67,9 +67,9 @@ void ScreenStart(){
     LCD_SetFont(&Font16x24);
     LCD_SetTextColor(LCD_COLOR_BLACK);
     
-    LCD_DisplayChar(56, 20, 'C'); LCD_DisplayChar(72, 20, 'O');LCD_DisplayChar(88, 20, 'N');
-    LCD_DisplayChar(104, 20, 'N');LCD_DisplayChar(120, 20, 'E');LCD_DisplayChar(136, 20, 'C');
-    LCD_DisplayChar(152, 20, 'T');LCD_DisplayChar(168, 20, '4');
+    LCD_DisplayChar(56, 20, 'C'); HAL_Delay(200); LCD_DisplayChar(72, 20, 'O'); HAL_Delay(200); LCD_DisplayChar(88, 20, 'N'); HAL_Delay(200); 
+    LCD_DisplayChar(104, 20, 'N'); HAL_Delay(200); LCD_DisplayChar(120, 20, 'E'); HAL_Delay(200); LCD_DisplayChar(136, 20, 'C');
+    HAL_Delay(200); LCD_DisplayChar(152, 20, 'T'); HAL_Delay(200); LCD_DisplayChar(168, 20, '4');
 
     LCD_SetFont(&Font16x24);
     LCD_DisplayChar(56, 90, '1'); LCD_DisplayChar(72, 90, '-'); LCD_DisplayChar(88, 90, 'P');
@@ -79,7 +79,7 @@ void ScreenStart(){
     LCD_DisplayChar(56, 180, '2'); LCD_DisplayChar(72, 180, '-');LCD_DisplayChar(88, 180, 'P');
     LCD_DisplayChar(104, 180, 'L');LCD_DisplayChar(120, 180, 'A');LCD_DisplayChar(136, 180, 'Y');
     LCD_DisplayChar(152, 180, 'E');LCD_DisplayChar(168, 180, 'R');
-
+    
     LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
     LCD_Draw_Circle_Fill(120, 230, 30, LCD_COLOR_BLUE2);
     
@@ -93,7 +93,7 @@ void ScreenStart(){
                 break;
             }
         }
-    }
+    } 
 }
 
 
@@ -110,8 +110,11 @@ void ScreenPlay(){
     LCD_DisplayChar(74, 40, 'E'); LCD_DisplayChar(90, 40, 'R');  LCD_DisplayChar(106, 40, ' '); LCD_DisplayChar(114, 40, '2');
     LCD_Draw_Circle_Fill(130, 45, 5, LCD_COLOR_YELLOW);
 
-    // LCD_Draw_Circle_Fill()
     NewGame();
     Drawboard();
     GameBoardGrid();
+}
+
+ScreenEnd(){
+    LCD_Clear(0, LCD_COLOR_RED);
 }
