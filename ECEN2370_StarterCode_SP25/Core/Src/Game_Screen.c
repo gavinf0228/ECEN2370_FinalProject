@@ -1,8 +1,12 @@
 #include "Game_Screen.h"
-
+static BoardSettings currentplayer;
 BoardSettings boardspots[ROWS][COLUMNS];
+static uint16_t YellowScore;
+static uint16_t RedScore;
+
 
 void NewGame(){
+    
     for (int r = 0; r < ROWS; r++){
         for (int c = 0; c < COLUMNS; c++) {
             boardspots[r][c] = CLEARED;
@@ -60,6 +64,7 @@ void GameBoardGrid(){
 
 
 void ScreenStart(){
+
     STMPE811_TouchData touch;
 
     LCD_Clear(0, LCD_COLOR_YELLOW);
@@ -115,6 +120,48 @@ void ScreenPlay(){
     GameBoardGrid();
 }
 
-ScreenEnd(){
-    LCD_Clear(0, LCD_COLOR_RED);
+void ScreenEnd(){
+    STMPE811_TouchData touch;
+    LCD_Clear(0, LCD_COLOR_GREEN);
+
+    LCD_SetFont(&Font12x12);
+    LCD_SetTextColor(LCD_COLOR_BLACK);
+    
+    LCD_DisplayChar(10, 10, 'T'); LCD_DisplayChar(26, 10, 'I'); LCD_DisplayChar(42, 10, 'M'); LCD_DisplayChar(58, 10, 'E'); LCD_DisplayChar(74, 10, ':');
+    
+    LCD_DisplayChar(10, 25, 'R'); LCD_DisplayChar(26, 25, 'E'); LCD_DisplayChar(42, 25, 'D'); LCD_DisplayChar(58, 25, ':'); LCD_DisplayChar(58 +16, 25, RedScore +'0');
+    
+    LCD_DisplayChar(10, 40, 'Y'); LCD_DisplayChar(26, 40, 'E'); LCD_DisplayChar(42, 40, 'L'); LCD_DisplayChar(58, 40, 'L'); LCD_DisplayChar(74, 40, 'O');  
+    LCD_DisplayChar(74+16, 40, 'W');  LCD_DisplayChar(74+16+16, 40, ':'); LCD_DisplayChar(74+16+16+16, 40, YellowScore + '0');
+
+    if (currentplayer == YELLOW){
+        LCD_DisplayChar(56+30, 100, 'W'); LCD_DisplayChar(72+30, 100, 'I'); LCD_DisplayChar(88+30, 100, 'N'); LCD_DisplayChar(88+16+30, 100, 'S');
+        LCD_DisplayChar(88+16+30+16,100, '!');
+        LCD_Draw_Circle_Fill(120, 140, 20, LCD_COLOR_YELLOW);
+        YellowScore ++;
+    } else if (currentplayer == RED){
+        LCD_DisplayChar(56+30, 100, 'W'); LCD_DisplayChar(72+30, 100, 'I'); LCD_DisplayChar(88+30, 100, 'N'); LCD_DisplayChar(88+16+30, 100, 'S');
+        LCD_DisplayChar(88+16+30+16,100, '!');
+        LCD_Draw_Circle_Fill(120, 140, 20, LCD_COLOR_RED);
+        RedScore ++;
+    }
+
+    LCD_SetFont(&Font16x24);
+    LCD_DisplayChar(56+30, 180, 'P'); LCD_DisplayChar(72+30, 180, 'L'); LCD_DisplayChar(88+30, 180, 'A');
+    LCD_DisplayChar(104+30, 180, 'Y');LCD_DisplayChar(56-8+30, 205, 'A');LCD_DisplayChar(56-8+16+30, 205, 'G');
+    LCD_DisplayChar(56-8+16+16+30, 205, 'A'); LCD_DisplayChar(56-8+16+16+16+30, 205, 'I'); LCD_DisplayChar(56-8+16+16+16+16+30, 205, 'N');
+    
+    LCD_Draw_Circle_Fill(120, 250,20,LCD_COLOR_BLUE2);
+
+    while (1) {
+		/* If touch pressed */
+		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
+			/* Touch valid */
+            if (TM_STMPE811_TouchInRectangle(&touch, 120-20, 250-20, 40, 40)){
+                HAL_Delay(500);
+                ScreenStart();
+                break;
+            }
+        } 
+    } 
 }

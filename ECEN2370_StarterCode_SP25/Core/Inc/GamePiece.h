@@ -13,4 +13,7 @@ void GamePieceMovement();
 void DrawGamePiece();
 void DropGamePiece();
 uint16_t GetPieceData(uint16_t piecepos);
-void CheckWin();
+bool CheckWin();
+void EndGame();
+bool GetEndgame();
+void setEndgame(bool newval);

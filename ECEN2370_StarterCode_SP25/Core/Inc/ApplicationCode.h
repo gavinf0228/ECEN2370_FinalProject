@@ -17,9 +17,10 @@
 
 void ApplicationInit(void);
 void LCD_Visual_Demo(void);
-void InitGameplay();
-void movementtest();
-
+void ApplicationInitGameplay();
+void ApplicationInitPiece();
+void ApplicationPieceMovement();
+void ApplicationEndGame();
 #if (COMPILE_TOUCH_FUNCTIONS == 1)
 void LCD_Touch_Polling_Demo(void);
 #endif // (COMPILE_TOUCH_FUNCTIONS == 1)
