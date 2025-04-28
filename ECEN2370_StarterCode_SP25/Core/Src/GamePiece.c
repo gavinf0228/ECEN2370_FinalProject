@@ -7,6 +7,7 @@ bool Player1; //for logic of changing colors
 bool endGame;
 
 
+
 void InitGamePiece(){
     if (endGame == false){
         if (Player1 == true){
@@ -226,9 +227,15 @@ bool CheckWin() {
 
 void EndGame(){
     if (CheckWin() == true){
+        if (currentplayer == YELLOW){
+            YellowScore++;
+        } else if (currentplayer == RED){
+            RedScore++;
+        }
         ScreenEnd();
     }
 }
+
 
 bool GetEndgame(){
     return endGame;

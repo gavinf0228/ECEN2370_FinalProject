@@ -1,3 +1,0 @@
-
-
-void touch_handlerUpdate();

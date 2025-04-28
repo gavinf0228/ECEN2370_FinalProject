@@ -8,6 +8,9 @@
 #define GAMEON  1
 #define GAMEOFF 0
 
+extern uint16_t RedScore;
+extern uint16_t YellowScore;
+
 typedef enum {
     CLEARED,
     YELLOW,
@@ -24,6 +27,4 @@ void ScreenStart();
 void ScreenPlay();
 void ScreenEnd();
 void DropGamePiece();
-
-
-
+void ScoreBoard(uint16_t red, uint16_t yellow);
