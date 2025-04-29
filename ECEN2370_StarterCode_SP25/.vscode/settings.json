@@ -6,6 +6,8 @@
         "fonts.h": "c",
         "game_screen.h": "c",
         "stm32f4xx_hal.h": "c",
-        "ili9341.h": "c"
+        "ili9341.h": "c",
+        "gamepiece.h": "c",
+        "rng_driver.h": "c"
     }
 }

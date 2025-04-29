@@ -6,7 +6,7 @@
  */
 
 #include "ApplicationCode.h"
-
+bool OnePlayer;
 /* Static variables */
 volatile bool drop;
 
@@ -41,18 +41,42 @@ void LCD_Visual_Demo(void)
 }
 
 void ApplicationInitGameplay(){
-	ScreenStart();
+	OnePlayer = ScreenStart();
+	ScreenPlay();
+	
+	Player1 = true;
+
 	InitGamePiece();
 
 	//ScreenEnd();
 }
 
 void ApplicationInitPiece(){
+
+	Player1 = true;
 	InitGamePiece();
+	// if (OnePlayer == false){
+	// 	InitGamePiece();
+	// } else {
+	// 	initRNGPiece();
+	// }
 }
 
 void ApplicationPieceMovement(){
-	GamePieceMovement();
+	if (OnePlayer) {
+		if (Player1){
+			GamePieceMovement();
+		} else {
+			initRNGPiece();
+		}
+	} else {
+		GamePieceMovement();
+	}
+	// if (OnePlayer == true){
+	// 	initRNGPiece();
+	// } else {
+	// 	GamePieceMovement();
+	// }
 }
 
 void ApplicationEndGame(){
@@ -77,7 +101,7 @@ void LCD_Touch_Polling_Demo(void)
 }
 
 void EXTI0_IRQHandler(){
-	
+
 	EXTI_HandleTypeDef hexti;
 	hexti.Line = EXTI_LINE_0;
 	HAL_NVIC_DisableIRQ(EXTI0_IRQn);

@@ -4,16 +4,17 @@ uint16_t RedScore =0;
 uint16_t YellowScore =0;
 bool gamemode;  //gamemode = true is single player. false - 2 player
 
+
 void NewGame(){
     StartTimer();
     for (int r = 0; r < ROWS; r++){
         for (int c = 0; c < COLUMNS; c++) {
-            boardspots[r][c] = CLEARED;
+            boardspots[r][c] = CLEARED; //sets the array to all 0s. clears the game
         }
     }
 }
 
-void Drawboard(){
+void Drawboard(){ 
     for (int r = 0; r < ROWS; r++){
         for (int c = 0; c < COLUMNS; c++){
             uint16_t x = 30 + c * 30;
@@ -62,18 +63,16 @@ void GameBoardGrid(){
 }
 
 
-void ScreenStart(){
-
+bool ScreenStart(){
     STMPE811_TouchData touch;
-
     LCD_Clear(0, LCD_COLOR_YELLOW);
 
     LCD_SetFont(&Font16x24);
     LCD_SetTextColor(LCD_COLOR_BLACK);
     
-    LCD_DisplayChar(56, 20, 'C'); HAL_Delay(200); LCD_DisplayChar(72, 20, 'O'); HAL_Delay(200); LCD_DisplayChar(88, 20, 'N'); HAL_Delay(200); 
-    LCD_DisplayChar(104, 20, 'N'); HAL_Delay(200); LCD_DisplayChar(120, 20, 'E'); HAL_Delay(200); LCD_DisplayChar(136, 20, 'C');
-    HAL_Delay(200); LCD_DisplayChar(152, 20, 'T'); HAL_Delay(200); LCD_DisplayChar(168, 20, '4');
+    LCD_DisplayChar(56, 20, 'C'); LCD_DisplayChar(72, 20, 'O');  LCD_DisplayChar(88, 20, 'N'); 
+    LCD_DisplayChar(104, 20, 'N'); LCD_DisplayChar(120, 20, 'E');  LCD_DisplayChar(136, 20, 'C');
+     LCD_DisplayChar(152, 20, 'T');  LCD_DisplayChar(168, 20, '4');
 
     LCD_SetFont(&Font16x24);
     LCD_DisplayChar(56, 90, '1'); LCD_DisplayChar(72, 90, '-'); LCD_DisplayChar(88, 90, 'P');
@@ -92,15 +91,14 @@ void ScreenStart(){
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
 			/* Touch valid */
             if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 140-30, 60, 60)){
-                // gamemode = true;
-                ScreenPlay();
+                gamemode = true;
                 break;
-            // } else if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 230 - 30, 60,60)){
-            //     gamemode false;
-            //     break
+            } else if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 230 - 30, 60,60)){
+                gamemode = false;
+                break;
             }
         }
-    } //return gamemode; 
+    } return gamemode; 
 }
 
 
@@ -121,12 +119,13 @@ void ScreenPlay(){
     NewGame();
     Drawboard();
     GameBoardGrid();
+
+
 }
 
 void ScreenEnd(){
     STMPE811_TouchData touch;
     StopTimer();
-
     uint32_t time = GetTimer();
     uint32_t hundreds = (time / 100) % 10;
     uint32_t tens = (time / 10) % 10;
@@ -155,8 +154,7 @@ void ScreenEnd(){
     LCD_DisplayChar(74+16+16+16, 40, YellowScore + '0');
     
     LCD_SetTextColor(LCD_COLOR_BLACK);
-    LCD_DisplayChar(56+30, 100, 'W'); LCD_DisplayChar(72+30, 100, 'I'); LCD_DisplayChar(88+30, 100, 'N'); LCD_DisplayChar(88+16+30, 100, 'S');
-    LCD_DisplayChar(88+16+30+16,100, '!'); 
+
 
     
 
@@ -171,12 +169,11 @@ void ScreenEnd(){
 		/* If touch pressed */
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
 			/* Touch valid */
-            if (TM_STMPE811_TouchInRectangle(&touch, 120-20, 250-20, 40, 40)){
+            if (TM_STMPE811_TouchInRectangle(&touch, 0, 0, LCD_PIXEL_WIDTH, LCD_PIXEL_HEIGHT)){
                 HAL_Delay(500);
-                ScreenStart();
-                break;
-            }
+                return;
+            } 
         } 
-    } 
+    }
 }
 

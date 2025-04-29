@@ -1,6 +1,6 @@
-../Core/Src/Game_Screen.c:7:6:NewGame	3
-../Core/Src/Game_Screen.c:16:6:Drawboard	7
-../Core/Src/Game_Screen.c:34:6:GameBoardGrid	5
-../Core/Src/Game_Screen.c:65:6:ScreenStart	6
-../Core/Src/Game_Screen.c:108:6:ScreenPlay	1
-../Core/Src/Game_Screen.c:126:6:ScreenEnd	6
+../Core/Src/Game_Screen.c:8:6:NewGame	3
+../Core/Src/Game_Screen.c:17:6:Drawboard	7
+../Core/Src/Game_Screen.c:35:6:GameBoardGrid	5
+../Core/Src/Game_Screen.c:66:6:ScreenStart	10
+../Core/Src/Game_Screen.c:106:6:ScreenPlay	1
+../Core/Src/Game_Screen.c:126:6:ScreenEnd	4

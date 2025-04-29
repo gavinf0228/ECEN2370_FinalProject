@@ -1,12 +1,10 @@
 #include "GamePiece.h"
-static BoardSettings currentplayer; //2d array to track winning data
+BoardSettings currentplayer; //2d array to track winning data
 static uint16_t XPos;   //keep track of moving piece left and right
 static uint16_t YPos; //keep track of moving piece up and down (dropping)
 static uint16_t FillColor; //changes color of piece
-bool Player1; //for logic of changing colors
+bool Player1 = true; //for logic of changing colors
 bool endGame;
-
-
 
 void InitGamePiece(){
     if (endGame == false){
@@ -73,7 +71,7 @@ void GamePieceMovement(){
             //     HAL_Delay(500);
             }
         }
-    } EndGame();
+    } 
 }
 
 void DrawGamePiece(){
@@ -95,7 +93,10 @@ void DropGamePiece(){
                 } else {
                     LCD_Draw_Circle_Fill(x, y, PIECE_RADIUS, LCD_COLOR_RED);
                 }
-                CheckWin();
+                if (CheckWin()){
+                    EndGame();
+                    return;
+                }
                 Player1 = !Player1; //switch to player two
                 InitGamePiece();
                 break;
@@ -243,4 +244,25 @@ bool GetEndgame(){
 
 void setEndgame(bool newval){
     endGame = newval;
+}
+
+void initRNGPiece(){
+    if (endGame == false){
+        if (currentplayer == RED){
+            XPos = GenerateRNGNum();
+    
+            FillColor = LCD_COLOR_BLUE2;
+            DrawGamePiece();
+
+            XPos = LEFT_COLUMN + XPos * PIECESPACING;
+        
+            FillColor = LCD_COLOR_RED;
+            DrawGamePiece();
+            DropGamePiece();
+        } if (currentplayer == YELLOW){
+            GamePieceMovement();
+        }
+    } 
+    CheckWin(); 
+    InitGamePiece();
 }

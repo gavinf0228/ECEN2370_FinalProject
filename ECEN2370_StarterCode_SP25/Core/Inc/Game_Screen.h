@@ -24,7 +24,7 @@ extern BoardSettings boardspots[ROWS][COLUMNS];
 void NewGame();
 void Drawboard();
 void GameBoardGrid();
-void ScreenStart();
+bool ScreenStart();
 void ScreenPlay();
 void ScreenEnd();
 void DropGamePiece();
