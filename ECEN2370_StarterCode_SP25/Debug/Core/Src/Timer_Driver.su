@@ -1,0 +1,4 @@
+../Core/Src/Timer_Driver.c:6:6:initTimer	8	static
+../Core/Src/Timer_Driver.c:10:6:StartTimer	8	static
+../Core/Src/Timer_Driver.c:14:6:StopTimer	8	static
+../Core/Src/Timer_Driver.c:18:10:GetTimer	8	static

@@ -62,15 +62,15 @@ void GamePieceMovement(){
         STMPE811_TouchData touch;
         if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
             /* Touch valid */
-            if (TM_STMPE811_TouchInRectangle(&touch, 0, 0, 120, 200)){
+            if (TM_STMPE811_TouchInRectangle(&touch, 0, 0, 120, 320)){
                 GamePieceLeft();
                 HAL_Delay(500);
-            } else if (TM_STMPE811_TouchInRectangle(&touch, 120, 0, 120, 200)){
+            } else if (TM_STMPE811_TouchInRectangle(&touch, 120, 0, 120, 320)){
                 GamePieceRight();
                 HAL_Delay(500);
-            } else if (TM_STMPE811_TouchInRectangle(&touch, 0, 200, 240, 120)){
-                DropGamePiece();
-                HAL_Delay(500);
+            // } else if (TM_STMPE811_TouchInRectangle(&touch, 0, 200, 240, 120)){
+            //     DropGamePiece();
+            //     HAL_Delay(500);
             }
         }
     } EndGame();
@@ -198,13 +198,13 @@ bool CheckWin() {
                     boardspots[k][l-3] == 2){
                         endGame = true;
                     }
-                } if ((k + 3 < ROWS) && (l + 3 < COLUMNS)){
-                    if (boardspots[k][l] == 2 &&
-                    boardspots[k][l+1] == 2 &&
-                    boardspots[k][l+2] == 2 &&
-                    boardspots[k][l+3] == 2){
-                        endGame = true;
-                    } 
+                // } if ((k + 3 < ROWS) && (l + 3 < COLUMNS)){
+                //     if (boardspots[k][l] == 2 &&
+                //     boardspots[k][l+1] == 2 &&
+                //     boardspots[k][l+2] == 2 &&
+                //     boardspots[k][l+3] == 2){
+                //         endGame = true;
+                //     } 
                 } if ((k + 3 < ROWS) && (l + 3 < COLUMNS)){ //checks diagonally down right 
                     if (boardspots[k][l] == 2 &&
                     boardspots[k+1][l+1] == 2 &&

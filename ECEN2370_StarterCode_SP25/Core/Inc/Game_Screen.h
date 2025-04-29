@@ -1,4 +1,5 @@
 #include "LCD_Driver.h"
+#include "Timer_Driver.h"
 #include <stdbool.h>
 
 #define ROWS 6

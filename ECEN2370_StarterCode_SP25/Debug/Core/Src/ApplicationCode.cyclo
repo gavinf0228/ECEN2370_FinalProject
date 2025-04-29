@@ -5,3 +5,4 @@
 ../Core/Src/ApplicationCode.c:54:6:ApplicationPieceMovement	1
 ../Core/Src/ApplicationCode.c:58:6:ApplicationEndGame	1
 ../Core/Src/ApplicationCode.c:62:6:LCD_Touch_Polling_Demo	2
+../Core/Src/ApplicationCode.c:79:6:EXTI0_IRQHandler	1

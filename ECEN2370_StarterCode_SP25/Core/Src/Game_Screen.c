@@ -2,9 +2,10 @@
 BoardSettings boardspots[ROWS][COLUMNS];
 uint16_t RedScore =0;
 uint16_t YellowScore =0;
+bool gamemode;  //gamemode = true is single player. false - 2 player
 
 void NewGame(){
-
+    StartTimer();
     for (int r = 0; r < ROWS; r++){
         for (int c = 0; c < COLUMNS; c++) {
             boardspots[r][c] = CLEARED;
@@ -90,14 +91,18 @@ void ScreenStart(){
 		/* If touch pressed */
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
 			/* Touch valid */
-            if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 140-30, 60, 60) || TM_STMPE811_TouchInRectangle(&touch, 120-30, 230 - 30, 60,60)){
-                HAL_Delay(500);
+            if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 140-30, 60, 60)){
+                // gamemode = true;
                 ScreenPlay();
                 break;
+            // } else if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 230 - 30, 60,60)){
+            //     gamemode false;
+            //     break
             }
         }
-    } 
+    } //return gamemode; 
 }
+
 
 
 void ScreenPlay(){
@@ -120,13 +125,25 @@ void ScreenPlay(){
 
 void ScreenEnd(){
     STMPE811_TouchData touch;
+    StopTimer();
+
+    uint32_t time = GetTimer();
+    uint32_t hundreds = (time / 100) % 10;
+    uint32_t tens = (time / 10) % 10;
+    uint32_t ones = (time /1) % 10;
+
+
+    
     LCD_Clear(0, LCD_COLOR_GREEN);
 
     LCD_SetFont(&Font12x12);
     LCD_SetTextColor(LCD_COLOR_BLACK);
 
     LCD_DisplayChar(10, 10, 'T'); LCD_DisplayChar(26, 10, 'I'); LCD_DisplayChar(42, 10, 'M'); LCD_DisplayChar(58, 10, 'E'); LCD_DisplayChar(74, 10, ':');
-    
+    LCD_DisplayChar(74 + 16, 10, hundreds + '0');
+    LCD_DisplayChar(74 + 16 + 16, 10, tens + '0');
+    LCD_DisplayChar(74 + 16 + 16 + 16, 10, ones + '0');
+
     LCD_DisplayChar(10, 25, 'R'); LCD_DisplayChar(26, 25, 'E'); LCD_DisplayChar(42, 25, 'D'); LCD_DisplayChar(58, 25, ':'); 
     LCD_SetTextColor(LCD_COLOR_RED);
     LCD_DisplayChar(58 +16, 25, RedScore +'0');
@@ -150,7 +167,6 @@ void ScreenEnd(){
     LCD_DisplayChar(56-8+16+16+30, 205, 'A'); LCD_DisplayChar(56-8+16+16+16+30, 205, 'I'); LCD_DisplayChar(56-8+16+16+16+16+30, 205, 'N');
     
     LCD_Draw_Circle_Fill(120, 250,20,LCD_COLOR_BLUE2);
-
     while (1) {
 		/* If touch pressed */
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {

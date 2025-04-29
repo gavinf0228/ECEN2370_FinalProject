@@ -8,7 +8,7 @@
 #include "ApplicationCode.h"
 
 /* Static variables */
-
+volatile bool drop;
 
 extern void initialise_monitor_handles(void); 
 
@@ -75,5 +75,16 @@ void LCD_Touch_Polling_Demo(void)
 		}
 	}
 }
+
+void EXTI0_IRQHandler(){
+	
+	EXTI_HandleTypeDef hexti;
+	hexti.Line = EXTI_LINE_0;
+	HAL_NVIC_DisableIRQ(EXTI0_IRQn);
+	HAL_EXTI_ClearPending(&hexti, EXTI_TRIGGER_FALLING);
+	DropGamePiece();
+	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+}
+
 #endif // COMPILE_TOUCH_FUNCTIONS
 

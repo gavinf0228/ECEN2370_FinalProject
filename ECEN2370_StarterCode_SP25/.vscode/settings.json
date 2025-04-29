@@ -4,6 +4,8 @@
         "lcd_driver.h": "c",
         "stmpe811.h": "c",
         "fonts.h": "c",
-        "game_screen.h": "c"
+        "game_screen.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "ili9341.h": "c"
     }
 }

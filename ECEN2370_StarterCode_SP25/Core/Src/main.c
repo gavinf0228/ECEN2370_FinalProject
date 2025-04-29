@@ -476,9 +476,10 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : B1_Pin MEMS_INT1_Pin MEMS_INT2_Pin TP_INT1_Pin */
   GPIO_InitStruct.Pin = B1_Pin|MEMS_INT1_Pin|MEMS_INT2_Pin|TP_INT1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 
   /*Configure GPIO pin : ACP_RST_Pin */
   GPIO_InitStruct.Pin = ACP_RST_Pin;

@@ -1,0 +1,4 @@
+../Core/Src/Timer_Driver.c:6:6:initTimer	1
+../Core/Src/Timer_Driver.c:10:6:StartTimer	1
+../Core/Src/Timer_Driver.c:14:6:StopTimer	1
+../Core/Src/Timer_Driver.c:18:10:GetTimer	1
