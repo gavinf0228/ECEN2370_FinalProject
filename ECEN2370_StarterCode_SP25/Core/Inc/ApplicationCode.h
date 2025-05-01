@@ -15,6 +15,7 @@
 #ifndef INC_APPLICATIONCODE_H_
 #define INC_APPLICATIONCODE_H_
 
+void appDrop();
 void ApplicationInit(void);
 void LCD_Visual_Demo(void);
 void ApplicationInitGameplay();

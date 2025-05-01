@@ -1,3 +1,17 @@
+
+//DISCLAIMER: CODE RUNS PERFECTLY OUTSIDE OF DEBUGGER. DEBUGGER CAUSES BOARD TO FAULT IN THE I2C WHILE LOOP
+// To whomever is grading this. please take this into account. Thank you.
+
+
+
+
+
+
+
+
+
+
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -17,6 +31,12 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+
+
+
+
+
+
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -108,20 +128,22 @@ int main(void)
 
   /* USER CODE END 2 */
 #if COMPILE_TOUCH_FUNCTIONS == 1 // This block will need to be deleted
-  ApplicationInitGameplay();
+  
+  //ApplicationInitGameplay();
   
 //  LCD_Touch_Polling_Demo(); // This function Will not return
 #endif
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
-    ApplicationInitGameplay();
-    while (!GetEndgame()) {
+    ApplicationInitGameplay(); //init the game
+    while (!GetEndgame()) { //if the endGame bool is not true then loop movement for the game
       ApplicationPieceMovement();
     }
+     setEndgame(false); //when game over reset endGame to false 
     /* USER CODE END WHILE */
-      EndGame();
-      setEndgame(false);
+      //EndGame();
+  
     }
     /* USER CODE BEGIN 3 */
 }

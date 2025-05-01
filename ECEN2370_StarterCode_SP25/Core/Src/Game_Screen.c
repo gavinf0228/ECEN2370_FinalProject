@@ -2,7 +2,6 @@
 BoardSettings boardspots[ROWS][COLUMNS];
 uint16_t RedScore =0;
 uint16_t YellowScore =0;
-bool gamemode;  //gamemode = true is single player. false - 2 player
 
 
 void NewGame(){
@@ -14,11 +13,11 @@ void NewGame(){
     }
 }
 
-void Drawboard(){ 
+void Drawboard(){ //As said. Draws board 
     for (int r = 0; r < ROWS; r++){
         for (int c = 0; c < COLUMNS; c++){
-            uint16_t x = 30 + c * 30;
-            uint16_t y = 120 + r * 30;
+            uint16_t x = 30 + c * 30; //spacing for the columns
+            uint16_t y = 120 + r * 30; //spacing for the rows
             uint16_t color;
             switch (boardspots[r][c]){
                 case CLEARED: color = LCD_COLOR_WHITE;
@@ -28,35 +27,35 @@ void Drawboard(){
                 case RED: color = LCD_COLOR_RED;
                     break;
             }
-            LCD_Draw_Circle_Fill(x, y, 10, color);
+            LCD_Draw_Circle_Fill(x, y, 10, color); //filll in those spaces with said color
         }
     }
 }
-void GameBoardGrid(){
+void GameBoardGrid(){ //draw gameboard
 
-    uint16_t board_left = 30 - 12;
-    uint16_t board_right = 30 + (COLUMNS - 1) * 30 + 12;
-    uint16_t board_top = 120 - 12;
-    uint16_t board_bottom = 120 + (ROWS - 1) * 30 + 12;
+    //uint16_t board_left = 30 - 12;
+    //uint16_t board_right = 30 + (COLUMNS - 1) * 30 + 12;
+    //uint16_t board_top = 120 - 12;
+    //uint16_t board_bottom = 120 + (ROWS - 1) * 30 + 12;
 
       // draw top and bottom borders as horizontal lines using vertical line of height 1
-    for (uint16_t x = board_left; x <= board_right; ++x) {
-          LCD_Draw_Vertical_Line(x, board_top, 1, LCD_COLOR_BLACK);    // top border
-          LCD_Draw_Vertical_Line(x, board_bottom, 1, LCD_COLOR_BLACK); // bottom border
+    for (uint16_t x = BOARD_LEFT; x <= BOARD_RIGHT; ++x) {
+          LCD_Draw_Vertical_Line(x, BOARD_TOP, 1, LCD_COLOR_BLACK);    // top border
+          LCD_Draw_Vertical_Line(x, BOARD_BOTTOM, 1, LCD_COLOR_BLACK); // bottom border
       }
 
       // draw left and right borders
-      LCD_Draw_Vertical_Line(board_left, board_top, board_bottom - board_top + 1, LCD_COLOR_BLACK);  // left border
-      LCD_Draw_Vertical_Line(board_right, board_top, board_bottom - board_top + 1, LCD_COLOR_BLACK);
+      LCD_Draw_Vertical_Line(BOARD_LEFT, BOARD_TOP, BOARD_BOTTOM - BOARD_TOP + 1, LCD_COLOR_BLACK);  // left border
+      LCD_Draw_Vertical_Line(BOARD_RIGHT, BOARD_TOP, BOARD_BOTTOM - BOARD_TOP + 1, LCD_COLOR_BLACK);
       for (int c = 1; c < COLUMNS; ++c) {
               uint16_t x = 30 + c * 30 - 15; // halfway between circles
-              LCD_Draw_Vertical_Line(x, board_top, board_bottom - board_top + 1, LCD_COLOR_BLACK);
+              LCD_Draw_Vertical_Line(x, BOARD_TOP, BOARD_BOTTOM - BOARD_TOP + 1, LCD_COLOR_BLACK);
           }
 
           // Draw horizontal dividers between rows
           for (int r = 1; r < ROWS; ++r) {
               uint16_t y = 120 + r * 30 - 15; // halfway between circles
-              for (uint16_t x = board_left; x <= board_right; ++x) {
+              for (uint16_t x = BOARD_LEFT; x <= BOARD_RIGHT; ++x) {
                   LCD_Draw_Vertical_Line(x, y, 1, LCD_COLOR_BLACK);
               }
           }
@@ -65,6 +64,8 @@ void GameBoardGrid(){
 
 bool ScreenStart(){
     STMPE811_TouchData touch;
+    bool gamemode;  //gamemode = true is single player. false - 2 player
+
     LCD_Clear(0, LCD_COLOR_YELLOW);
 
     LCD_SetFont(&Font16x24);
@@ -86,19 +87,21 @@ bool ScreenStart(){
     LCD_Draw_Circle_Fill(120, 140, 30, LCD_COLOR_RED);
     LCD_Draw_Circle_Fill(120, 230, 30, LCD_COLOR_BLUE2);
     
-    while (1) {
+    while (1) { //initiate the gamemode
 		/* If touch pressed */
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
 			/* Touch valid */
             if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 140-30, 60, 60)){
+                //HAL_Delay(500);
                 gamemode = true;
                 break;
             } else if (TM_STMPE811_TouchInRectangle(&touch, 120-30, 230 - 30, 60,60)){
+                //HAL_Delay(500);
                 gamemode = false;
                 break;
             }
-        }
-    } return gamemode; 
+        } 
+    } return gamemode; //flag set for gamemode
 }
 
 
@@ -116,8 +119,8 @@ void ScreenPlay(){
     LCD_DisplayChar(74, 40, 'E'); LCD_DisplayChar(90, 40, 'R');  LCD_DisplayChar(106, 40, ' '); LCD_DisplayChar(114, 40, '2');
     LCD_Draw_Circle_Fill(130, 45, 5, LCD_COLOR_YELLOW);
 
-    NewGame();
-    Drawboard();
+    // NewGame();
+    Drawboard(); //setup the baord to be played on
     GameBoardGrid();
 
 
@@ -126,6 +129,8 @@ void ScreenPlay(){
 void ScreenEnd(){
     STMPE811_TouchData touch;
     StopTimer();
+
+    //convert the tick to seconds. If overflow we have the hundreds, tens, and ones place
     uint32_t time = GetTimer();
     uint32_t hundreds = (time / 100) % 10;
     uint32_t tens = (time / 10) % 10;
@@ -165,15 +170,16 @@ void ScreenEnd(){
     LCD_DisplayChar(56-8+16+16+30, 205, 'A'); LCD_DisplayChar(56-8+16+16+16+30, 205, 'I'); LCD_DisplayChar(56-8+16+16+16+16+30, 205, 'N');
     
     LCD_Draw_Circle_Fill(120, 250,20,LCD_COLOR_BLUE2);
+
     while (1) {
 		/* If touch pressed */
 		if (returnTouchStateAndLocation(&touch) == STMPE811_State_Pressed) {
 			/* Touch valid */
             if (TM_STMPE811_TouchInRectangle(&touch, 0, 0, LCD_PIXEL_WIDTH, LCD_PIXEL_HEIGHT)){
-                HAL_Delay(500);
+                //ScreenStart();
                 return;
             } 
         } 
-    }
+    } //ScreenStart();
 }
 

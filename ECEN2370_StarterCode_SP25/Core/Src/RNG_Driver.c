@@ -3,6 +3,7 @@
 
 RNG_HandleTypeDef hrng;
 
+// this was taken from main and put here. only way i could figure out how to use the RNG stuff as it was greyed out. 
 void MX_RNG_Init(void)
 {
 
@@ -26,6 +27,7 @@ void MX_RNG_Init(void)
 
 } 
 
+// generate a random number and get that. that random number represents the column
 uint32_t GenerateRNGNum(){
     uint32_t column;
 

@@ -4,9 +4,10 @@ static uint16_t XPos;   //keep track of moving piece left and right
 static uint16_t YPos; //keep track of moving piece up and down (dropping)
 static uint16_t FillColor; //changes color of piece
 bool Player1 = true; //for logic of changing colors
-bool endGame;
+bool endGame; //is the game over?
+bool updateScore = false;
 
-void InitGamePiece(){
+void InitGamePiece(){ //starts the gamepiece at the very top of the board
     if (endGame == false){
         if (Player1 == true){
             currentplayer = YELLOW;
@@ -24,7 +25,7 @@ void InitGamePiece(){
     }
 }
 
-void GamePieceLeft(){
+void GamePieceLeft(){ //moves piece to the left
     if (endGame == false){
         FillColor = LCD_COLOR_BLUE2;
         DrawGamePiece();
@@ -39,7 +40,7 @@ void GamePieceLeft(){
     }
 }
 
-void GamePieceRight(){
+void GamePieceRight(){ // moves piece to the right
     if (endGame == false){
         FillColor = LCD_COLOR_BLUE2;
         DrawGamePiece();
@@ -69,7 +70,7 @@ void GamePieceMovement(){
             // } else if (TM_STMPE811_TouchInRectangle(&touch, 0, 200, 240, 120)){
             //     DropGamePiece();
             //     HAL_Delay(500);
-            }
+             }
         }
     } 
 }
@@ -78,7 +79,7 @@ void DrawGamePiece(){
     LCD_Draw_Circle_Fill(XPos, YPos, 10, FillColor);
 }
 
-void DropGamePiece(){
+void DropGamePiece(){ //drops the game piece. Utilized as interrupt for the button
     if (endGame == false){
         int pos = GetPieceData(XPos);
         LCD_Draw_Circle_Fill(XPos, YPos, PIECE_RADIUS, LCD_COLOR_BLUE2); // clears piece when its dropped
@@ -93,7 +94,7 @@ void DropGamePiece(){
                 } else {
                     LCD_Draw_Circle_Fill(x, y, PIECE_RADIUS, LCD_COLOR_RED);
                 }
-                if (CheckWin()){
+                if (CheckWin()){ //after each drop piece we want to check for a win. If that is true we end the game
                     EndGame();
                     return;
                 }
@@ -108,12 +109,12 @@ void DropGamePiece(){
 
 // this gets the pixel position of the gamepiece. Used to track data for win
 uint16_t GetPieceData(uint16_t piecepos){
-    int pos = (piecepos - CENTERPIECE_IFOFF) / PIECESPACING;
+    int pos = (piecepos - CENTERPIECE_IFOFF) / PIECESPACING; //Gives raw column number
 
-    if (pos < 0){
+    if (pos < 0){ //force the position to be 0
         pos = 0;
     } else if (pos >= COLUMNS){
-        pos = COLUMNS -1;
+        pos = COLUMNS -1; //make sure index always 0, Columns-1
     }
     return pos;
 }
@@ -124,7 +125,7 @@ bool CheckWin() {
         for (int i = 0; i < ROWS; i++) { //iterate through rows
             for (int j = 0; j < COLUMNS; j++) { //iterate through columns
                 if(i+3 < ROWS){ // checks for below placed piece
-                    if(boardspots[i][j] == 1 &&
+                    if(boardspots[i][j] == 1 && // 1 represents YELLOW in enum. 2 represents RED in enum 
                     boardspots[i+1][j] == 1 &&
                     boardspots[i+2][j] == 1 &&
                     boardspots[i+3][j] == 1){
@@ -226,7 +227,7 @@ bool CheckWin() {
     } return endGame;
 }
 
-void EndGame(){
+void EndGame(){ // ends the game if ther is a win. Increments the score at the end
     if (CheckWin() == true){
         if (currentplayer == YELLOW){
             YellowScore++;
@@ -237,32 +238,40 @@ void EndGame(){
     }
 }
 
-
+//gets the status of the game. If its over or not
 bool GetEndgame(){
     return endGame;
 }
 
+//used to reset endgame
 void setEndgame(bool newval){
     endGame = newval;
 }
 
+//code used to run the RNG for single player mode
 void initRNGPiece(){
     if (endGame == false){
-        if (currentplayer == RED){
-            XPos = GenerateRNGNum();
+        if (currentplayer == RED){ //RNG will always be RED
+            XPos = GenerateRNGNum(); //store the random number from RNG as the column number
     
             FillColor = LCD_COLOR_BLUE2;
             DrawGamePiece();
 
-            XPos = LEFT_COLUMN + XPos * PIECESPACING;
+            XPos = LEFT_COLUMN + XPos * PIECESPACING; //Initializing the left column as start. add on the random number + spacing between pieces
         
             FillColor = LCD_COLOR_RED;
-            DrawGamePiece();
+            DrawGamePiece();// The RNG now draws the game piece at that location and drops it. 
             DropGamePiece();
-        } if (currentplayer == YELLOW){
+        } if (currentplayer == YELLOW){ //controls for the human player (YELLOW)
             GamePieceMovement();
         }
     } 
-    CheckWin(); 
+    CheckWin(); //check the win 
     InitGamePiece();
+}
+
+void ResetGame(){ //used in Application code to reset data.
+    endGame = false;
+    Player1 = true;
+    updateScore = false;
 }

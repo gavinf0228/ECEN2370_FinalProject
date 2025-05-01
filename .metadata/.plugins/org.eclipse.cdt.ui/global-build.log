@@ -1,14 +1,24 @@
-16:05:33 **** Incremental Build of configuration Debug for project ECEN2370_StarterCode_SP25 ****
+19:49:19 **** Incremental Build of configuration Debug for project GFortinFinal ****
 make -j16 all 
-arm-none-eabi-size  ECEN2370_StarterCode_SP25.elf 
+arm-none-eabi-gcc "../Core/Src/ApplicationCode.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ApplicationCode.d" -MT"Core/Src/ApplicationCode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ApplicationCode.o"
+arm-none-eabi-gcc "../Core/Src/GamePiece.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/GamePiece.d" -MT"Core/Src/GamePiece.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GamePiece.o"
+arm-none-eabi-gcc "../Core/Src/Game_Screen.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Game_Screen.d" -MT"Core/Src/Game_Screen.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Game_Screen.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "GFortinFinal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\gavin\OneDrive\Documents\College\Spring 2025\Embedded\Lab 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GFortinFinal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GFortinFinal.elf
+ 
+arm-none-eabi-size  GFortinFinal.elf 
+arm-none-eabi-objdump -h -S GFortinFinal.elf  > "GFortinFinal.list"
    text	   data	    bss	    dec	    hex	filename
-  35468	     36	 156076	 191580	  2ec5c	ECEN2370_StarterCode_SP25.elf
+  35480	     36	 156076	 191592	  2ec68	GFortinFinal.elf
 Finished building: default.size.stdout
  
-16:05:38 **** Incremental Build of configuration Debug for project ECEN2370_StarterCode_SP25 ****
+Finished building: GFortinFinal.list
+ 
+19:49:22 **** Incremental Build of configuration Debug for project GFortinFinal ****
 make -j16 all 
-arm-none-eabi-size  ECEN2370_StarterCode_SP25.elf 
+arm-none-eabi-size  GFortinFinal.elf 
    text	   data	    bss	    dec	    hex	filename
-  35468	     36	 156076	 191580	  2ec5c	ECEN2370_StarterCode_SP25.elf
+  35480	     36	 156076	 191592	  2ec68	GFortinFinal.elf
 Finished building: default.size.stdout
  

@@ -1,2 +1,2 @@
-../Core/Src/RNG_Driver.c:6:6:MX_RNG_Init	2
-../Core/Src/RNG_Driver.c:29:10:GenerateRNGNum	1
+../Core/Src/RNG_Driver.c:7:6:MX_RNG_Init	2
+../Core/Src/RNG_Driver.c:31:10:GenerateRNGNum	1

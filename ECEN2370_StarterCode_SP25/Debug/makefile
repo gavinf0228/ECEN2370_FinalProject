@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := ECEN2370_StarterCode_SP25
+BUILD_ARTIFACT_NAME := GFortinFinal
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-ECEN2370_StarterCode_SP25.elf \
+GFortinFinal.elf \
 
 MAP_FILES += \
-ECEN2370_StarterCode_SP25.map \
+GFortinFinal.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-ECEN2370_StarterCode_SP25.list \
+GFortinFinal.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: ECEN2370_StarterCode_SP25.elf secondary-outputs
+main-build: GFortinFinal.elf secondary-outputs
 
 # Tool invocations
-ECEN2370_StarterCode_SP25.elf ECEN2370_StarterCode_SP25.map: $(OBJS) $(USER_OBJS) C:\Users\gavin\OneDrive\Documents\College\Spring\ 2025\Embedded\Lab\ 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ECEN2370_StarterCode_SP25.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\gavin\OneDrive\Documents\College\Spring 2025\Embedded\Lab 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ECEN2370_StarterCode_SP25.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+GFortinFinal.elf GFortinFinal.map: $(OBJS) $(USER_OBJS) C:\Users\gavin\OneDrive\Documents\College\Spring\ 2025\Embedded\Lab\ 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "GFortinFinal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\gavin\OneDrive\Documents\College\Spring 2025\Embedded\Lab 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GFortinFinal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-ECEN2370_StarterCode_SP25.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ECEN2370_StarterCode_SP25.list"
+GFortinFinal.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "GFortinFinal.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) ECEN2370_StarterCode_SP25.elf ECEN2370_StarterCode_SP25.list ECEN2370_StarterCode_SP25.map default.size.stdout
+	-$(RM) GFortinFinal.elf GFortinFinal.list GFortinFinal.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

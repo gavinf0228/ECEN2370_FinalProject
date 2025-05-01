@@ -6,9 +6,9 @@
  */
 
 #include "ApplicationCode.h"
-bool OnePlayer;
+bool OnePlayer; //bool that represents OnePlayer mode
 /* Static variables */
-volatile bool drop;
+volatile bool drop = false; // flag for the button interrupt that deals with dropping a piece
 
 extern void initialise_monitor_handles(void); 
 
@@ -16,7 +16,13 @@ extern void initialise_monitor_handles(void);
 static STMPE811_TouchData StaticTouchData;
 #endif // COMPILE_TOUCH_FUNCTIONS
 
-void ApplicationInit(void)
+void appDrop(){ //not used
+	if (drop){
+		drop = false;
+		DropGamePiece();
+	}
+}
+void ApplicationInit(void) // given to us. unchanged 
 {
 	initialise_monitor_handles(); // Allows printf functionality
     LTCD__Init();
@@ -32,7 +38,7 @@ void ApplicationInit(void)
 	#endif // COMPILE_TOUCH_FUNCTIONS
 }
 
-void LCD_Visual_Demo(void)
+void LCD_Visual_Demo(void) // not used
 {
 	//  ScreenStart();
 	// HAL_Delay(3000);
@@ -40,21 +46,25 @@ void LCD_Visual_Demo(void)
 	// visualDemo();
 }
 
-void ApplicationInitGameplay(){
-	OnePlayer = ScreenStart();
-	ScreenPlay();
+void ApplicationInitGameplay(){ // reset the game each time. init New game and set drop to false.
+	ResetGame();
+	NewGame();
+	drop = false;
 	
-	Player1 = true;
+	OnePlayer = ScreenStart(); //OnePlayer flag is equal to startscreen which determines mode
+	ScreenPlay(); //screen to play
+	
+	Player1 = true; //player 1 is yellow
 
 	InitGamePiece();
 
 	//ScreenEnd();
 }
 
-void ApplicationInitPiece(){
+void ApplicationInitPiece(){ //piece is initialized
 
-	Player1 = true;
-	InitGamePiece();
+	Player1 = true; //player YELLOW
+	InitGamePiece(); //game piece is drawn at top
 	// if (OnePlayer == false){
 	// 	InitGamePiece();
 	// } else {
@@ -63,14 +73,18 @@ void ApplicationInitPiece(){
 }
 
 void ApplicationPieceMovement(){
-	if (OnePlayer) {
+	if (drop){ //if drop occurs set back to false and call droppiece. this flag is used for button interrupt
+		drop = false;
+		DropGamePiece();
+	}
+	if (OnePlayer) { //if single player true. then human (Player1) will have movement. if not player1 (RNG) then it will do its thing
 		if (Player1){
 			GamePieceMovement();
 		} else {
 			initRNGPiece();
 		}
 	} else {
-		GamePieceMovement();
+		GamePieceMovement(); // if 2 Player then you can move
 	}
 	// if (OnePlayer == true){
 	// 	initRNGPiece();
@@ -79,11 +93,11 @@ void ApplicationPieceMovement(){
 	// }
 }
 
-void ApplicationEndGame(){
+void ApplicationEndGame(){ //ends the game
 	EndGame();
 }
 #if COMPILE_TOUCH_FUNCTIONS == 1
-void LCD_Touch_Polling_Demo(void)
+void LCD_Touch_Polling_Demo(void) //unused
 {
 	LCD_Clear(0,LCD_COLOR_GREEN);
 	while (1) {
@@ -100,13 +114,14 @@ void LCD_Touch_Polling_Demo(void)
 	}
 }
 
-void EXTI0_IRQHandler(){
+void EXTI0_IRQHandler(){ //button IRQ handler I took from previous lab. in MX GPIO added NVIC enabled for the EXTI0 IRQn for GPIOA. 
 
 	EXTI_HandleTypeDef hexti;
 	hexti.Line = EXTI_LINE_0;
 	HAL_NVIC_DisableIRQ(EXTI0_IRQn);
 	HAL_EXTI_ClearPending(&hexti, EXTI_TRIGGER_FALLING);
-	DropGamePiece();
+	drop = true;
+	//DropGamePiece();
 	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 }
 

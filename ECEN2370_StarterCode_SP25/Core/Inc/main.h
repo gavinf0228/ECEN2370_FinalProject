@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "RNG_Driver.h"
+#include "RNG_Driver.h" // needed so code works
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

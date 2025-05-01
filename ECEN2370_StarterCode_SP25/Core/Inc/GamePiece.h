@@ -8,9 +8,9 @@
 #define CENTERPIECE_IFOFF   15
 #define LEFT_COLUMN     30
 
-extern bool Player1;
+extern bool Player1; //keeps track of the two players
 
-extern BoardSettings currentplayer;
+extern BoardSettings currentplayer; //what the current player is 
 
 void InitGamePiece();
 void GamePieceLeft();
@@ -24,4 +24,5 @@ void EndGame();
 bool GetEndgame();
 void setEndgame(bool newval);
 void initRNGPiece();
+void ResetGame();
 
