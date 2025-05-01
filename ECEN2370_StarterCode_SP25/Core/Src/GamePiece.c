@@ -93,18 +93,20 @@ void DropGamePiece(){ //drops the game piece. Utilized as interrupt for the butt
                     LCD_Draw_Circle_Fill(x, y, PIECE_RADIUS, LCD_COLOR_YELLOW);
                 } else {
                     LCD_Draw_Circle_Fill(x, y, PIECE_RADIUS, LCD_COLOR_RED);
-                }
-                if (CheckWin()){ //after each drop piece we want to check for a win. If that is true we end the game
-                    EndGame();
-                    return;
-                }
-                Player1 = !Player1; //switch to player two
-                InitGamePiece();
-                break;
+                } break;
             }
         }
+        if (CheckWin()){
+            EndGame();
+        }
+        if (CheckTie()){ //if board fills it goes to endgame
+            EndGame();
+        }
+        Player1 = !Player1; //switch to player two
+        InitGamePiece();
+        }
     }
-}
+
 
 
 // this gets the pixel position of the gamepiece. Used to track data for win
@@ -224,10 +226,12 @@ bool CheckWin() {
                 }
             }
         }
-    } return endGame;
+    } 
+    return endGame;
 }
 
 void EndGame(){ // ends the game if ther is a win. Increments the score at the end
+    endGame = true;
     if (CheckWin() == true){
         if (currentplayer == YELLOW){
             YellowScore++;
@@ -236,7 +240,7 @@ void EndGame(){ // ends the game if ther is a win. Increments the score at the e
         }
         ScreenEnd();
     } else if (CheckTie()){ // if tie just go to screen end
-        ScreenEnd();
+        ScreenEnd(); //tie does not add score.
     }
 }
 
@@ -279,12 +283,9 @@ void ResetGame(){ //used in Application code to reset data.
 }
 
 bool CheckTie(){ //checks for a tie
-    for (int i = 0; i < ROWS; ++i){
-        for (int j = 0; j < COLUMNS; ++j){
-            if (boardspots[i][j] == CLEARED){
-                return false;
-            }
+    for (int col = 0; col < COLUMNS; col++){ //if top row is cleared then its false. 
+        if (boardspots[0][col] == CLEARED){
+            return false;
         }
-    }
-    return true;
+    } return true;
 }
