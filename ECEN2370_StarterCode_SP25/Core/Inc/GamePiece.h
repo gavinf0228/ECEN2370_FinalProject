@@ -25,4 +25,5 @@ bool GetEndgame();
 void setEndgame(bool newval);
 void initRNGPiece();
 void ResetGame();
+bool CheckTie();
 

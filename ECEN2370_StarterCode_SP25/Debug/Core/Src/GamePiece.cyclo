@@ -6,8 +6,9 @@
 ../Core/Src/GamePiece.c:82:6:DropGamePiece	6
 ../Core/Src/GamePiece.c:111:10:GetPieceData	3
 ../Core/Src/GamePiece.c:123:6:CheckWin	71
-../Core/Src/GamePiece.c:230:6:EndGame	4
-../Core/Src/GamePiece.c:242:6:GetEndgame	1
-../Core/Src/GamePiece.c:247:6:setEndgame	1
-../Core/Src/GamePiece.c:252:6:initRNGPiece	4
-../Core/Src/GamePiece.c:273:6:ResetGame	1
+../Core/Src/GamePiece.c:230:6:EndGame	5
+../Core/Src/GamePiece.c:244:6:GetEndgame	1
+../Core/Src/GamePiece.c:249:6:setEndgame	1
+../Core/Src/GamePiece.c:254:6:initRNGPiece	4
+../Core/Src/GamePiece.c:275:6:ResetGame	1
+../Core/Src/GamePiece.c:281:6:CheckTie	4

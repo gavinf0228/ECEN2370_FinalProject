@@ -235,6 +235,8 @@ void EndGame(){ // ends the game if ther is a win. Increments the score at the e
             RedScore++;
         }
         ScreenEnd();
+    } else if (CheckTie()){ // if tie just go to screen end
+        ScreenEnd();
     }
 }
 
@@ -274,4 +276,15 @@ void ResetGame(){ //used in Application code to reset data.
     endGame = false;
     Player1 = true;
     updateScore = false;
+}
+
+bool CheckTie(){ //checks for a tie
+    for (int i = 0; i < ROWS; ++i){
+        for (int j = 0; j < COLUMNS; ++j){
+            if (boardspots[i][j] == CLEARED){
+                return false;
+            }
+        }
+    }
+    return true;
 }
