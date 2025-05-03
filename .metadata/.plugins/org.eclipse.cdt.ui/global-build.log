@@ -1,18 +1,25 @@
-01:28:16 **** Incremental Build of configuration Debug for project GFortinFinal ****
+11:27:28 **** Incremental Build of configuration Debug for project GFortinFinal ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/GamePiece.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/GamePiece.d" -MT"Core/Src/GamePiece.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GamePiece.o"
-arm-none-eabi-gcc -o "GFortinFinal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\gavin\OneDrive\Documents\College\Spring 2025\Embedded\Lab 6\ECEN2370_StarterCode_SP25\ECEN2370_StarterCode_SP25\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GFortinFinal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: GFortinFinal.elf
- 
 arm-none-eabi-size  GFortinFinal.elf 
-arm-none-eabi-objdump -h -S GFortinFinal.elf  > "GFortinFinal.list"
    text	   data	    bss	    dec	    hex	filename
   35580	     36	 156076	 191692	  2eccc	GFortinFinal.elf
 Finished building: default.size.stdout
  
-Finished building: GFortinFinal.list
+11:28:16 **** Incremental Build of configuration Debug for project GFortinFinal ****
+make -j16 all 
+arm-none-eabi-size  GFortinFinal.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35580	     36	 156076	 191692	  2eccc	GFortinFinal.elf
+Finished building: default.size.stdout
  
-01:28:19 **** Incremental Build of configuration Debug for project GFortinFinal ****
+11:28:45 **** Incremental Build of configuration Debug for project GFortinFinal ****
+make -j16 all 
+arm-none-eabi-size  GFortinFinal.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35580	     36	 156076	 191692	  2eccc	GFortinFinal.elf
+Finished building: default.size.stdout
+ 
+11:29:39 **** Incremental Build of configuration Debug for project GFortinFinal ****
 make -j16 all 
 arm-none-eabi-size  GFortinFinal.elf 
    text	   data	    bss	    dec	    hex	filename

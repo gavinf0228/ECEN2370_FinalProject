@@ -1,4 +1,4 @@
-01:28:19 **** Incremental Build of configuration Debug for project GFortinFinal ****
+11:29:39 **** Incremental Build of configuration Debug for project GFortinFinal ****
 make -j16 all 
 arm-none-eabi-size  GFortinFinal.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  GFortinFinal.elf
 Finished building: default.size.stdout
  
 
-01:28:19 Build Finished. 0 errors, 0 warnings. (took 373ms)
+11:29:39 Build Finished. 0 errors, 0 warnings. (took 238ms)
 
