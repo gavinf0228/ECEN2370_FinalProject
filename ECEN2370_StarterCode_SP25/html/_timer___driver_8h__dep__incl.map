@@ -1,0 +1,15 @@
+<map id="Core/Inc/Timer_Driver.h" name="Core/Inc/Timer_Driver.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,5,367,32"/>
+<area shape="rect" id="Node000002" href="$_game___screen_8h_source.html" title=" " alt="" coords="107,80,277,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,44,210,82,207,77,256,40"/>
+<area shape="rect" id="Node000007" href="$_timer___driver_8c.html" title=" " alt="" coords="301,80,464,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="317,39,368,77,365,82,314,44"/>
+<area shape="rect" id="Node000003" href="$_game_piece_8h.html" title="Functionality related to game piece movement, win checking, and player state." alt="" coords="115,155,269,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,122,195,154,189,154,189,122"/>
+<area shape="rect" id="Node000004" href="$_application_code_8h_source.html" title=" " alt="" coords="5,229,187,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="165,193,114,231,111,227,162,189"/>
+<area shape="rect" id="Node000006" href="$_game_piece_8c.html" title="Implements game piece movement, placement, RNG logic, and win/tie detection." alt="" coords="211,229,368,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="223,189,274,227,271,231,219,193"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title=": Main program body" alt="" coords="38,304,154,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,272,99,304,93,304,93,272"/>
+</map>

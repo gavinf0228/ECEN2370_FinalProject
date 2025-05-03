@@ -1,0 +1,16 @@
+<map id="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h" name="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+<area shape="rect" id="Node000001" title="Header file of FLASH HAL module." alt="" coords="190,5,362,64"/>
+<area shape="rect" id="Node000002" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="142,203,284,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,67,198,87,180,113,175,132,178,152,196,189,191,191,173,153,170,132,175,111,194,84,220,63"/>
+<area shape="rect" id="Node000006" href="$stm32f4xx__hal__flash__ex_8h.html" title="Header file of FLASH HAL Extension module." alt="" coords="189,120,363,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="279,64,279,104,273,104,273,64"/>
+<area shape="rect" id="Node000007" href="$stm32f4xx__hal__flash__ramfunc_8h.html" title="Header file of FLASH RAMFUNC driver." alt="" coords="387,112,528,155"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="331,62,406,102,404,107,329,67"/>
+<area shape="rect" id="Node000003" href="$stm32f4xx_8h.html" title="CMSIS STM32F4xx Device Peripheral Access Layer Header File." alt="" coords="5,277,99,304"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,232,95,273,93,268,184,227"/>
+<area shape="rect" id="Node000004" href="$stm32__hal__legacy_8h.html" title="This file contains aliases definition for the STM32Cube HAL constants macros and functions maintained..." alt="" coords="122,277,304,304"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="216,230,216,262,211,262,211,230"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="328,277,397,304"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="241,227,324,268,321,272,238,232"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="268,149,234,192,230,189,264,146"/>
+</map>

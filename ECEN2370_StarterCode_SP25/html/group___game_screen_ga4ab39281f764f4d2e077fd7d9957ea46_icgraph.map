@@ -1,0 +1,5 @@
+<map id="Drawboard" name="Drawboard">
+<area shape="rect" id="Node000001" title="Draws the game board grid onto the screen." alt="" coords="142,5,226,32"/>
+<area shape="rect" id="Node000002" href="$group___game_screen.html#gaaf834a2ce11c2c6364081ba0bb1940c2" title="Displays the main gameplay screen." alt="" coords="5,5,94,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,21,94,21,94,16,126,16"/>
+</map>

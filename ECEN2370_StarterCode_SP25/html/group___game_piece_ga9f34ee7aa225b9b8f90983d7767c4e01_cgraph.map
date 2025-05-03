@@ -1,0 +1,5 @@
+<map id="InitGamePiece" name="InitGamePiece">
+<area shape="rect" id="Node000001" title="Initializes the starting position of the game piece." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#ga4b395e71e4274a3c14bdbc5e7ba08ff0" title="Draws the current game piece on the screen." alt="" coords="161,5,281,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
+</map>

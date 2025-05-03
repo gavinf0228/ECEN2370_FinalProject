@@ -1,0 +1,26 @@
+<map id="DropGamePiece" name="DropGamePiece">
+<area shape="rect" id="Node000001" title="Drops a game piece in the current column based on player turn." alt="" coords="5,107,123,133"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#gacbee04a8baea589ca654efa0a6e15156" title="Checks if the game ended in a tie." alt="" coords="348,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,105,116,72,142,55,170,42,211,29,254,21,332,15,332,20,255,26,212,34,172,46,145,60,120,76,81,109"/>
+<area shape="rect" id="Node000003" href="$group___game_piece.html#ga3ed4773c0e9817dc1705f667fd465ebe" title="Checks the current board for a win condition." alt="" coords="345,107,427,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,117,330,117,330,123,123,123"/>
+<area shape="rect" id="Node000004" href="$group___game_piece.html#ga28b06b89ad80a380106a17dc2992b555" title="Triggers end game logic while updating score." alt="" coords="185,56,264,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,103,169,84,171,89,110,109"/>
+<area shape="rect" id="Node000009" href="$group___game_piece.html#ga2f061a30042f8397dc5808a77ab79d53" title="Converts pixel position to a board column index." alt="" coords="173,157,276,184"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="110,131,166,150,164,155,108,137"/>
+<area shape="rect" id="Node000010" href="$group___game_piece.html#ga9f34ee7aa225b9b8f90983d7767c4e01" title="Initializes the game piece at the starting position." alt="" coords="171,208,278,235"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="84,132,124,162,172,194,180,198,177,203,169,198,121,166,81,136"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="264,54,332,33,334,38,265,59"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="265,79,331,100,329,105,264,84"/>
+<area shape="rect" id="Node000005" href="$group___game_screen.html#gaee9d53e7e2bcaf881d302740036f02d4" title="Displays the end screen with final results." alt="" coords="344,56,429,83"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="265,67,328,67,328,72,265,72"/>
+<area shape="rect" id="Node000006" href="$group___timer_driver.html#gae4003131771925e866a98e60c9ae17d2" title="Returns the current elapsed time in milliseconds." alt="" coords="497,31,573,57"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="429,59,482,50,483,56,430,65"/>
+<area shape="rect" id="Node000008" href="$group___timer_driver.html#gaf3619f34a9bc0184b4578e5337069856" title="Stops the timer." alt="" coords="494,81,576,108"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="430,74,480,83,479,88,429,79"/>
+<area shape="rect" id="Node000007" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="624,56,724,83"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="574,48,609,55,608,60,573,53"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="576,85,608,79,609,84,577,90"/>
+<area shape="rect" id="Node000011" href="$group___game_piece.html#ga4b395e71e4274a3c14bdbc5e7ba08ff0" title="Draws the current game piece on the screen." alt="" coords="326,208,446,235"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="278,219,310,219,310,224,278,224"/>
+</map>

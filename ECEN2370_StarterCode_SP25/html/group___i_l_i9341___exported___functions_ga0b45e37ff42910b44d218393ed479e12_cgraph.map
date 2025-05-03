@@ -1,0 +1,7 @@
+<map id="LCD_Delay" name="LCD_Delay">
+<area shape="rect" id="Node000001" title="Wait for loop in ms." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="Node000002" href="$group___h_a_l___exported___functions___group2.html#gab1dc1e6b438daacfe38a312a90221330" title="This function provides minimum delay (in milliseconds) based on variable incremented." alt="" coords="143,5,231,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
+<area shape="rect" id="Node000003" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="279,5,379,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,16,264,16,264,21,232,21"/>
+</map>

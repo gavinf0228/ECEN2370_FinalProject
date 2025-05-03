@@ -1,0 +1,5 @@
+<map id="Game Piece Logic" name="Game Piece Logic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="216,5,344,32"/>
+<area shape="rect" id="Node000003" href="$group___r_n_g_driver.html" title=" " alt="" coords="392,5,482,32"/>
+<area shape="rect" id="Node000002" href="$group___game_screen.html" title="Handles screen transitions, game visuals, and user interaction." alt="" coords="5,5,168,32"/>
+</map>

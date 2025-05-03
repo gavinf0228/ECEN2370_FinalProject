@@ -1,0 +1,11 @@
+<map id="HAL_Delay" name="HAL_Delay">
+<area shape="rect" id="Node000001" title="This function provides minimum delay (in milliseconds) based on variable incremented." alt="" coords="353,31,441,57"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#ga97fc590f2ad2fdaa5fff091350d811da" title="Handles left/right movement input from the player." alt="" coords="155,5,305,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="337,38,305,33,306,27,338,32"/>
+<area shape="rect" id="Node000004" href="$group___i_l_i9341___exported___functions.html#ga0b45e37ff42910b44d218393ed479e12" title="Wait for loop in ms." alt="" coords="185,56,274,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="338,56,275,65,274,60,338,50"/>
+<area shape="rect" id="Node000003" href="$group___game_piece.html#gaee6cb6a20d1dde6b12a70e70202ef7cb" title="Initializes the RNG logic for single&#45;player mode." alt="" coords="5,5,107,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" id="Node000005" href="$group___i_l_i9341___exported___functions.html#ga9f53af6ab5b6427655c61ef71fa4a442" title="Power on the LCD." alt="" coords="14,56,98,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="170,72,98,72,98,67,170,67"/>
+</map>

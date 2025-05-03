@@ -1,0 +1,20 @@
+<map id="Core/Inc/RNG_Driver.h" name="Core/Inc/RNG_Driver.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="401,5,559,32"/>
+<area shape="rect" id="Node000002" href="$_game_piece_8h.html" title="Functionality related to game piece movement, win checking, and player state." alt="" coords="212,80,366,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,40,324,82,322,77,432,35"/>
+<area shape="rect" id="Node000006" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="423,80,537,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="483,48,483,80,477,80,477,48"/>
+<area shape="rect" id="Node000009" href="$_r_n_g___driver_8c.html" title="Implementation of the STM32 RNG peripheral interface." alt="" coords="561,80,722,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="523,36,614,77,612,82,521,41"/>
+<area shape="rect" id="Node000003" href="$_application_code_8h_source.html" title=" " alt="" coords="5,163,187,189"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,115,127,165,125,160,244,111"/>
+<area shape="rect" id="Node000005" href="$_game_piece_8c.html" title="Implements game piece movement, placement, RNG logic, and win/tie detection." alt="" coords="211,163,368,189"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="292,122,292,163,287,163,287,122"/>
+<area shape="rect" id="Node000004" href="$main_8c.html" title=": Main program body" alt="" coords="192,245,309,272"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="135,194,228,243,225,247,132,199"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="463,121,427,160,382,200,334,227,288,247,286,242,331,222,378,195,423,156,459,117"/>
+<area shape="rect" id="Node000007" href="$stm32f4xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="443,155,581,197"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="493,120,506,153,501,155,488,122"/>
+<area shape="rect" id="Node000008" href="$stm32f4xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="605,163,768,189"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="527,110,655,160,653,165,525,115"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ili9341_Write_Reg" name="ili9341_Write_Reg">
+<area shape="rect" id="Node000001" title="Writes to the selected LCD register." alt="" coords="180,56,306,83"/>
+<area shape="rect" id="Node000002" href="$ili9341_8c.html#a3c09dd822d1d76312b6143b8adcb00fa" title="Disables the Display." alt="" coords="5,5,132,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,54,116,35,118,30,180,48"/>
+<area shape="rect" id="Node000003" href="$ili9341_8c.html#ac3489560fb954b6e4bf5ac24ef99988d" title="Enables the Display." alt="" coords="5,56,132,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,72,132,72,132,67,164,67"/>
+<area shape="rect" id="Node000004" href="$group___i_l_i9341___exported___functions.html#ga9f53af6ab5b6427655c61ef71fa4a442" title="Power on the LCD." alt="" coords="27,107,110,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,90,111,111,110,105,179,85"/>
+</map>

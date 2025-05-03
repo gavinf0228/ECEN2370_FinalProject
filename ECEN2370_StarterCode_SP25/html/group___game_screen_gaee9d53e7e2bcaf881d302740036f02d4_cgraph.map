@@ -1,0 +1,10 @@
+<map id="ScreenEnd" name="ScreenEnd">
+<area shape="rect" id="Node000001" title="Displays the end screen with final results." alt="" coords="5,31,91,57"/>
+<area shape="rect" id="Node000002" href="$group___timer_driver.html#gae4003131771925e866a98e60c9ae17d2" title="Returns the current elapsed time in milliseconds." alt="" coords="142,5,217,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,33,126,26,127,31,92,38"/>
+<area shape="rect" id="Node000004" href="$group___timer_driver.html#gaf3619f34a9bc0184b4578e5337069856" title="Stops the timer." alt="" coords="139,56,220,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="92,50,124,56,123,61,91,55"/>
+<area shape="rect" id="Node000003" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="268,31,368,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="218,23,253,29,252,35,217,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="220,59,252,53,253,59,221,65"/>
+</map>

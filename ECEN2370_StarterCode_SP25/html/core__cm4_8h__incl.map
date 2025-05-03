@@ -1,0 +1,12 @@
+<map id="Drivers/CMSIS/Include/core_cm4.h" name="Drivers/CMSIS/Include/core_cm4.h">
+<area shape="rect" id="Node000001" title="CMSIS Cortex&#45;M4 Core Peripheral Access Layer Header File." alt="" coords="75,5,231,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="73,171,137,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,50,40,69,25,82,13,97,9,107,9,115,18,133,37,148,60,162,57,166,34,153,14,136,3,117,3,106,8,95,21,78,37,65,73,45"/>
+<area shape="rect" id="Node000003" href="$cmsis__version_8h.html" title="CMSIS Core(M) Version definitions." alt="" coords="23,96,139,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,50,104,86,100,82,132,47"/>
+<area shape="rect" id="Node000004" href="$cmsis__compiler_8h.html" title="CMSIS compiler generic header file." alt="" coords="163,96,287,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,47,206,82,202,86,170,50"/>
+<area shape="rect" id="Node000005" href="$mpu__armv7_8h_source.html" title=" " alt="" coords="311,96,411,123"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="207,46,315,87,313,92,206,51"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="205,125,140,165,138,160,203,121"/>
+</map>

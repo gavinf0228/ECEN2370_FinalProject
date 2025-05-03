@@ -1,0 +1,19 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="The application entry point." alt="" coords="5,107,55,133"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#ga837b5188206e3d7f7ee70577f39ff572" title="Get the Endgame object." alt="" coords="127,5,224,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,105,65,73,101,42,111,36,114,41,104,46,69,77,43,108"/>
+<area shape="rect" id="Node000003" href="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4" title="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..." alt="" coords="139,56,212,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,109,124,84,125,89,56,114"/>
+<area shape="rect" id="Node000006" href="$group___r_n_g_driver.html#ga5d8378b18a5f83ad6ab8281b5e390604" title="Initializes the RNG hardware peripheral." alt="" coords="124,107,227,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="55,117,108,117,108,123,55,123"/>
+<area shape="rect" id="Node000007" href="$group___game_piece.html#gad78656f92579787804037c31964625a6" title="Set the Endgame object." alt="" coords="128,157,222,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="56,126,121,149,120,154,54,131"/>
+<area shape="rect" id="Node000008" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="103,208,248,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="43,132,69,163,104,194,113,199,110,203,101,198,65,167,39,135"/>
+<area shape="rect" id="Node000004" href="$group___h_a_l___exported___functions___group1.html#ga44d1542f9985b2243b14a41070cc41cc" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="298,31,395,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="212,61,283,51,283,56,212,67"/>
+<area shape="rect" id="Node000005" href="$stm32f4xx__hal__msp_8c.html#gae4fb8e66865c87d0ebab74a726a6891f" title="Initialize the MSP." alt="" coords="298,81,395,108"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="212,72,283,83,283,88,212,77"/>
+<area shape="rect" id="Node000009" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="296,208,397,235"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="248,219,281,219,281,224,248,224"/>
+</map>

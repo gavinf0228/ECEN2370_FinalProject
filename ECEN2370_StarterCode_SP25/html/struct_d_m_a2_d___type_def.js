@@ -1,0 +1,26 @@
+var struct_d_m_a2_d___type_def =
+[
+    [ "AMTCR", "struct_d_m_a2_d___type_def.html#a9f16d1904f085dbd51466994f01bd9e2", null ],
+    [ "BGCLUT", "struct_d_m_a2_d___type_def.html#ac6cd6efd0eadd0504f15f963e54cf8f5", null ],
+    [ "BGCMAR", "struct_d_m_a2_d___type_def.html#a8108e797e9421f12d2fa5b7bca1d8a12", null ],
+    [ "BGCOLR", "struct_d_m_a2_d___type_def.html#a1b655471716402cff4ef1d584da01ea6", null ],
+    [ "BGMAR", "struct_d_m_a2_d___type_def.html#a2ab8fa08f05f63b322b38013283e6fa0", null ],
+    [ "BGOR", "struct_d_m_a2_d___type_def.html#a29e2e00c79be42d49f6f189c207cc664", null ],
+    [ "BGPFCCR", "struct_d_m_a2_d___type_def.html#a2ad24a3135aa498ba6691f6a114a9826", null ],
+    [ "CR", "struct_d_m_a2_d___type_def.html#ab40c89c59391aaa9d9a8ec011dd0907a", null ],
+    [ "FGCLUT", "struct_d_m_a2_d___type_def.html#a7ed3c45a71b6382890860bcd8f313d51", null ],
+    [ "FGCMAR", "struct_d_m_a2_d___type_def.html#a27ad59cf99d0d0904958175238c40d8d", null ],
+    [ "FGCOLR", "struct_d_m_a2_d___type_def.html#a3b7bcbbdcd4f728861babc3300a26f61", null ],
+    [ "FGMAR", "struct_d_m_a2_d___type_def.html#a17e8aa3d2c6464eba518c8ccf28c173d", null ],
+    [ "FGOR", "struct_d_m_a2_d___type_def.html#af3d84e911bbb2bf8cfa6d5e1dfe01afe", null ],
+    [ "FGPFCCR", "struct_d_m_a2_d___type_def.html#add402fd3aa4845802f08f8df79a5a72a", null ],
+    [ "IFCR", "struct_d_m_a2_d___type_def.html#ac6f9d540fd6a21c0fbc7bfbbee9a8504", null ],
+    [ "ISR", "struct_d_m_a2_d___type_def.html#ab3c49a96815fcbee63d95e1e74f20e75", null ],
+    [ "LWR", "struct_d_m_a2_d___type_def.html#a2fc2e30027d62fbf2ad32f911fbadeca", null ],
+    [ "NLR", "struct_d_m_a2_d___type_def.html#a1eef24a1df459c6e5dd17d516013c5fb", null ],
+    [ "OCOLR", "struct_d_m_a2_d___type_def.html#a5ec0a83694c97af7786583ef37fb795c", null ],
+    [ "OMAR", "struct_d_m_a2_d___type_def.html#ab6be353d6107a8bb0641a438ac0eb93d", null ],
+    [ "OOR", "struct_d_m_a2_d___type_def.html#afe934616b06edb746effd439206836a5", null ],
+    [ "OPFCCR", "struct_d_m_a2_d___type_def.html#a79db32535165c766c9de2374a27ed059", null ],
+    [ "RESERVED", "struct_d_m_a2_d___type_def.html#aba866c9137d0c578b9344d88cfbe17f2", null ]
+];

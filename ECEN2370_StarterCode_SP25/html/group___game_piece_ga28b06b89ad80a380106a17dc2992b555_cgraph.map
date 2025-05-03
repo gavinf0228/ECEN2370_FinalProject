@@ -1,0 +1,16 @@
+<map id="EndGame" name="EndGame">
+<area shape="rect" id="Node000001" title="Ends the game and triggers end screen logic." alt="" coords="5,56,85,83"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#gacbee04a8baea589ca654efa0a6e15156" title="Checks if the game ended in a tie." alt="" coords="137,5,214,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,53,124,36,126,41,83,58"/>
+<area shape="rect" id="Node000003" href="$group___game_piece.html#ga3ed4773c0e9817dc1705f667fd465ebe" title="Checks the current board for a win condition." alt="" coords="134,56,216,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,67,119,67,119,72,85,72"/>
+<area shape="rect" id="Node000004" href="$group___game_screen.html#gaee9d53e7e2bcaf881d302740036f02d4" title="Displays the end screen with final results." alt="" coords="133,107,218,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,81,126,98,124,103,81,86"/>
+<area shape="rect" id="Node000005" href="$group___timer_driver.html#gae4003131771925e866a98e60c9ae17d2" title="Returns the current elapsed time in milliseconds." alt="" coords="269,81,344,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="218,109,253,102,254,107,219,114"/>
+<area shape="rect" id="Node000007" href="$group___timer_driver.html#gaf3619f34a9bc0184b4578e5337069856" title="Stops the timer." alt="" coords="266,132,347,159"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="219,126,251,132,250,137,218,131"/>
+<area shape="rect" id="Node000006" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="395,107,496,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="345,99,380,105,379,111,344,104"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="347,135,380,129,381,135,348,141"/>
+</map>

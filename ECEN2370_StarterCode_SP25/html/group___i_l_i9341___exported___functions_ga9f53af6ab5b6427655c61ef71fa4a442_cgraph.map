@@ -1,0 +1,19 @@
+<map id="ili9341_Init" name="ili9341_Init">
+<area shape="rect" id="Node000001" title="Power on the LCD." alt="" coords="5,81,89,108"/>
+<area shape="rect" id="Node000002" href="$group___i_l_i9341___exported___functions.html#ga2ab32c85fa63d2acadeffc52a494f168" title="Writes data to the selected LCD register." alt="" coords="137,5,267,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,79,135,42,148,36,150,41,138,46,72,83"/>
+<area shape="rect" id="Node000004" href="$group___i_l_i9341___exported___functions.html#ga4adb2f8560c2addc44f415420f56d783" title="Writes to the selected LCD register." alt="" coords="139,56,265,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="89,85,123,80,124,85,90,91"/>
+<area shape="rect" id="Node000006" href="$group___i_l_i9341___exported___functions.html#ga0b45e37ff42910b44d218393ed479e12" title="Wait for loop in ms." alt="" coords="157,107,246,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="90,99,142,108,141,113,89,104"/>
+<area shape="rect" id="Node000009" href="$group___i_l_i9341___exported___functions.html#gaccf0a45e037a886f9b1a849bedd63735" title="Configures the LCD_SPI interface." alt="" coords="155,157,249,184"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="72,106,138,143,150,148,148,153,135,148,69,111"/>
+<area shape="rect" id="Node000003" href="$group___i_l_i9341___exported___functions.html#gaae6ab499c7ca32f026708cbfb5153c97" title="Writes register value." alt="" coords="315,5,449,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,16,299,16,299,21,267,21"/>
+<area shape="rect" id="Node000005" href="$group___i_l_i9341___exported___functions.html#ga435f47c3f7c327325ea17f71fae7cebc" title="Writes register address." alt="" coords="317,56,447,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="265,67,301,67,301,72,265,72"/>
+<area shape="rect" id="Node000007" href="$group___h_a_l___exported___functions___group2.html#gab1dc1e6b438daacfe38a312a90221330" title="This function provides minimum delay (in milliseconds) based on variable incremented." alt="" coords="338,107,426,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="247,117,322,117,322,123,247,123"/>
+<area shape="rect" id="Node000008" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="497,107,598,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="427,117,482,117,482,123,427,123"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="NewGame" name="NewGame">
+<area shape="rect" id="Node000001" title="Resets the game board and state to start a new game." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="Node000002" href="$group___timer_driver.html#ga66509b494102a5c28ba6c8be3eab7733" title="Starts the timer." alt="" coords="137,5,219,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,16,121,16,121,21,89,21"/>
+<area shape="rect" id="Node000003" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="267,5,367,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,16,251,16,251,21,219,21"/>
+</map>

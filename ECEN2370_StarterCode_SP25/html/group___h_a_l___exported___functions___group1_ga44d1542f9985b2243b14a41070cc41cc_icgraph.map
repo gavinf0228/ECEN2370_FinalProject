@@ -1,0 +1,11 @@
+<map id="HAL_InitTick" name="HAL_InitTick">
+<area shape="rect" id="Node000001" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="298,31,395,57"/>
+<area shape="rect" id="Node000002" href="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4" title="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..." alt="" coords="151,5,224,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,36,223,27,224,22,283,31"/>
+<area shape="rect" id="Node000004" href="$group___h_a_l___exported___functions___group2.html#ga47f2dd240b2aed823a76b11496f37690" title="Set new tick Freq." alt="" coords="125,56,250,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,57,251,62,250,57,282,51"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="16,5,66,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,21,66,21,66,16,136,16"/>
+<area shape="rect" id="Node000005" href="$group___timer_driver.html#ga5a7931957f8a5298b3982cab604da1ee" title="Initializes the timer peripheral." alt="" coords="5,56,77,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="109,72,77,72,77,67,109,67"/>
+</map>

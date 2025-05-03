@@ -1,0 +1,44 @@
+<map id="initRNGPiece" name="initRNGPiece">
+<area shape="rect" id="Node000001" title="Initializes the RNG logic for single&#45;player mode." alt="" coords="5,236,107,263"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#ga3ed4773c0e9817dc1705f667fd465ebe" title="Checks the current board for a win condition." alt="" coords="540,8,623,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,234,98,181,124,150,153,121,203,80,245,52,291,31,352,12,397,5,443,3,525,9,525,14,443,8,398,10,354,18,293,36,247,56,206,84,156,125,128,153,103,185,67,237"/>
+<area shape="rect" id="Node000003" href="$group___game_piece.html#ga4b395e71e4274a3c14bdbc5e7ba08ff0" title="Draws the current game piece on the screen." alt="" coords="521,287,642,314"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,252,507,291,506,296,107,257"/>
+<area shape="rect" id="Node000004" href="$group___game_screen.html#ga58dd3d84cc007e5d1854c11a6602f680" title="Drops the game piece into the board at the selected column.Determines available row,..." alt="" coords="171,135,288,162"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="79,233,191,167,194,172,82,238"/>
+<area shape="rect" id="Node000012" href="$group___game_piece.html#ga9f34ee7aa225b9b8f90983d7767c4e01" title="Initializes the game piece at the starting position." alt="" coords="360,211,467,238"/>
+<area shape="poly" id="edge25_Node000001_Node000012" title=" " alt="" coords="107,243,344,227,344,232,107,249"/>
+<area shape="rect" id="Node000013" href="$group___game_piece.html#ga97fc590f2ad2fdaa5fff091350d811da" title="Handles player input for piece movement." alt="" coords="155,312,305,339"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="89,261,156,291,183,303,181,308,154,296,87,266"/>
+<area shape="rect" id="Node000017" href="$group___r_n_g_driver.html#ga4ce00a68d538d6f243a4bb9c26a1044c" title="Generates a random number." alt="" coords="164,363,296,390"/>
+<area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="69,262,105,304,129,328,156,349,165,354,162,358,153,353,126,332,101,308,65,265"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="241,133,286,88,317,64,352,45,396,30,441,22,524,16,525,22,442,27,397,35,354,49,320,68,289,92,245,136"/>
+<area shape="rect" id="Node000005" href="$group___game_piece.html#gacbee04a8baea589ca654efa0a6e15156" title="Checks if the game ended in a tie." alt="" coords="543,160,620,187"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="289,150,528,167,527,172,289,155"/>
+<area shape="rect" id="Node000006" href="$group___game_piece.html#ga28b06b89ad80a380106a17dc2992b555" title="Triggers end game logic while updating score." alt="" coords="374,110,453,136"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="288,138,357,128,358,133,289,143"/>
+<area shape="rect" id="Node000011" href="$group___game_piece.html#ga2f061a30042f8397dc5808a77ab79d53" title="Converts pixel position to a board column index." alt="" coords="362,59,465,86"/>
+<area shape="poly" id="edge14_Node000004_Node000011" title=" " alt="" coords="263,132,364,90,366,94,265,137"/>
+<area shape="poly" id="edge15_Node000004_Node000012" title=" " alt="" coords="265,160,366,202,364,207,263,165"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="449,107,472,95,513,69,550,43,553,47,516,74,475,100,451,112"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="454,132,529,155,527,160,453,137"/>
+<area shape="rect" id="Node000007" href="$group___game_screen.html#gaee9d53e7e2bcaf881d302740036f02d4" title="Displays the end screen with final results." alt="" coords="539,110,624,136"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="453,120,524,120,524,126,453,126"/>
+<area shape="rect" id="Node000008" href="$group___timer_driver.html#gae4003131771925e866a98e60c9ae17d2" title="Returns the current elapsed time in milliseconds." alt="" coords="696,160,772,187"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="625,134,682,154,681,159,623,139"/>
+<area shape="rect" id="Node000010" href="$group___timer_driver.html#gaf3619f34a9bc0184b4578e5337069856" title="Stops the timer." alt="" coords="693,110,774,136"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="625,120,678,120,678,126,625,126"/>
+<area shape="rect" id="Node000009" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="826,160,926,187"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="772,171,810,171,810,176,772,176"/>
+<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="775,134,823,152,821,157,773,139"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="446,236,537,278,535,283,444,241"/>
+<area shape="rect" id="Node000014" href="$group___game_piece.html#ga5d24319a0e40db3b85a3eb81d64ce23d" title="Moves the game piece to the left." alt="" coords="358,363,469,390"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="282,337,348,356,347,361,280,342"/>
+<area shape="rect" id="Node000015" href="$group___game_piece.html#gae6a35fe465891807b1b0681bf4098898" title="Moves the game piece to the right." alt="" coords="353,312,473,339"/>
+<area shape="poly" id="edge20_Node000013_Node000015" title=" " alt="" coords="305,323,337,323,337,328,305,328"/>
+<area shape="rect" id="Node000016" href="$group___h_a_l___exported___functions___group2.html#gab1dc1e6b438daacfe38a312a90221330" title="This function provides minimum delay (in milliseconds) based on variable incremented." alt="" coords="690,312,778,339"/>
+<area shape="poly" id="edge22_Node000013_Node000016" title=" " alt="" coords="284,337,307,349,322,363,330,377,339,389,354,399,400,413,447,417,495,414,543,405,629,376,695,344,697,349,631,381,544,410,496,419,447,423,399,418,352,404,335,393,326,379,317,366,303,353,281,342"/>
+<area shape="poly" id="edge19_Node000014_Node000003" title=" " alt="" coords="447,360,472,349,537,318,539,323,474,353,449,365"/>
+<area shape="poly" id="edge21_Node000015_Node000003" title=" " alt="" coords="473,314,505,309,506,314,474,319"/>
+<area shape="poly" id="edge23_Node000016_Node000009" title=" " alt="" coords="746,310,850,197,854,200,750,314"/>
+</map>

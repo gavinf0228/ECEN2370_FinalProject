@@ -1,0 +1,5 @@
+<map id="ili9341_ReadData" name="ili9341_ReadData">
+<area shape="rect" id="Node000001" title="Reads the selected LCD Register." alt="" coords="5,5,130,32"/>
+<area shape="rect" id="Node000002" href="$group___i_l_i9341___exported___functions.html#ga10fd152b0ec2326173d80e922d8635fc" title="Reads register value." alt="" coords="178,5,313,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
+</map>

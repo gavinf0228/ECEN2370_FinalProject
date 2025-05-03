@@ -1,0 +1,5 @@
+<map id="ili9341_Send_Data" name="ili9341_Send_Data">
+<area shape="rect" id="Node000001" title="Writes data to the selected LCD register." alt="" coords="137,5,267,32"/>
+<area shape="rect" id="Node000002" href="$group___i_l_i9341___exported___functions.html#ga9f53af6ab5b6427655c61ef71fa4a442" title="Power on the LCD." alt="" coords="5,5,89,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,21,89,21,89,16,121,16"/>
+</map>

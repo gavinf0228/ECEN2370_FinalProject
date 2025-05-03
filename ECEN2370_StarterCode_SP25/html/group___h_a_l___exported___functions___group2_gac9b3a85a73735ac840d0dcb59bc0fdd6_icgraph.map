@@ -1,0 +1,28 @@
+<map id="HAL_GetTick" name="HAL_GetTick">
+<area shape="rect" id="Node000001" title="Provides a tick value in millisecond." alt="" coords="655,81,755,108"/>
+<area shape="rect" id="Node000002" href="$group___timer_driver.html#gae4003131771925e866a98e60c9ae17d2" title="Returns the current elapsed time in milliseconds." alt="" coords="525,5,600,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="663,76,588,35,591,30,666,71"/>
+<area shape="rect" id="Node000006" href="$group___h_a_l___exported___functions___group2.html#gab1dc1e6b438daacfe38a312a90221330" title="This function provides minimum delay (in milliseconds) based on variable incremented." alt="" coords="518,107,607,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="640,109,608,115,607,110,639,104"/>
+<area shape="rect" id="Node000011" href="$group___timer_driver.html#ga66509b494102a5c28ba6c8be3eab7733" title="Starts the timer." alt="" coords="521,157,604,184"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="666,118,591,159,588,154,663,114"/>
+<area shape="rect" id="Node000013" href="$group___timer_driver.html#gaf3619f34a9bc0184b4578e5337069856" title="Stops the timer." alt="" coords="522,56,603,83"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="639,86,603,79,604,74,640,80"/>
+<area shape="rect" id="Node000003" href="$group___game_screen.html#gaee9d53e7e2bcaf881d302740036f02d4" title="Displays the end screen with final results." alt="" coords="352,5,438,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="509,21,438,21,438,16,509,16"/>
+<area shape="rect" id="Node000004" href="$group___game_piece.html#ga28b06b89ad80a380106a17dc2992b555" title="Ends the game and triggers end screen logic." alt="" coords="182,5,261,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="337,21,261,21,261,16,337,16"/>
+<area shape="rect" id="Node000005" href="$group___game_screen.html#ga58dd3d84cc007e5d1854c11a6602f680" title="Drops a game piece in the current column based on player turn." alt="" coords="5,5,123,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="166,21,123,21,123,16,166,16"/>
+<area shape="rect" id="Node000007" href="$group___game_piece.html#ga97fc590f2ad2fdaa5fff091350d811da" title="Handles left/right movement input from the player." alt="" coords="320,56,470,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="503,105,441,86,443,81,504,100"/>
+<area shape="rect" id="Node000009" href="$group___i_l_i9341___exported___functions.html#ga0b45e37ff42910b44d218393ed479e12" title="Wait for loop in ms." alt="" coords="350,107,440,133"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="503,123,440,123,440,117,503,117"/>
+<area shape="rect" id="Node000008" href="$group___game_piece.html#gaee6cb6a20d1dde6b12a70e70202ef7cb" title="Initializes the RNG logic for single&#45;player mode." alt="" coords="171,56,272,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="305,72,272,72,272,67,305,67"/>
+<area shape="rect" id="Node000010" href="$group___i_l_i9341___exported___functions.html#ga9f53af6ab5b6427655c61ef71fa4a442" title="Power on the LCD." alt="" coords="180,107,263,133"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="335,123,263,123,263,117,335,117"/>
+<area shape="rect" id="Node000012" href="$group___game_screen.html#gadfe34532a9f16b809ce5752fe143dddc" title="Resets the game board and state to start a new game." alt="" coords="354,157,437,184"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="506,173,437,173,437,168,506,168"/>
+<area shape="poly" id="edge13_Node000013_Node000003" title=" " alt="" coords="506,55,438,34,439,29,508,50"/>
+</map>

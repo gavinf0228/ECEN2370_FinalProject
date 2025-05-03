@@ -1,0 +1,7 @@
+<map id="GamePieceRight" name="GamePieceRight">
+<area shape="rect" id="Node000001" title="Moves the game peice to the right." alt="" coords="353,5,473,32"/>
+<area shape="rect" id="Node000002" href="$group___game_piece.html#ga97fc590f2ad2fdaa5fff091350d811da" title="Handles left/right movement input from the player." alt="" coords="155,5,305,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="338,21,306,21,306,16,338,16"/>
+<area shape="rect" id="Node000003" href="$group___game_piece.html#gaee6cb6a20d1dde6b12a70e70202ef7cb" title="Initializes the RNG logic for single&#45;player mode." alt="" coords="5,5,107,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+</map>

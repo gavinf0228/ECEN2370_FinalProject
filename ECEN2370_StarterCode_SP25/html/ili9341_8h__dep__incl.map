@@ -1,0 +1,18 @@
+<map id="Core/Inc/ili9341.h" name="Core/Inc/ili9341.h">
+<area shape="rect" id="Node000001" title="This file contains all the functions prototypes for the ili9341.c driver." alt="" coords="177,5,300,32"/>
+<area shape="rect" id="Node000002" href="$_l_c_d___driver_8h_source.html" title=" " alt="" coords="80,80,235,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,44,173,82,170,78,211,41"/>
+<area shape="rect" id="Node000008" href="$ili9341_8c.html" title="This file includes the LCD driver for ILI9341 LCD." alt="" coords="259,80,384,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="266,40,309,78,305,82,263,45"/>
+<area shape="rect" id="Node000003" href="$_application_code_8h_source.html" title=" " alt="" coords="5,304,187,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,121,124,156,112,197,105,239,99,304,94,303,99,238,107,196,119,154,137,119"/>
+<area shape="rect" id="Node000005" href="$_game___screen_8h_source.html" title=" " alt="" coords="134,155,303,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="180,117,210,153,206,156,176,120"/>
+<area shape="rect" id="Node000004" href="$main_8c.html" title=": Main program body" alt="" coords="38,379,154,405"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,346,99,378,93,378,93,346"/>
+<area shape="rect" id="Node000006" href="$_game_piece_8h.html" title="Functionality related to game piece movement, win checking, and player state." alt="" coords="142,229,296,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="221,197,221,229,216,229,216,197"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="186,267,119,306,116,301,183,262"/>
+<area shape="rect" id="Node000007" href="$_game_piece_8c.html" title="Implements game piece movement, placement, RNG logic, and win/tie detection." alt="" coords="211,304,368,331"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="243,265,279,302,275,305,240,269"/>
+</map>

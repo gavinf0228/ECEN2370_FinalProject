@@ -1,0 +1,5 @@
+<map id="ili9341_Write_Reg" name="ili9341_Write_Reg">
+<area shape="rect" id="Node000001" title="Writes to the selected LCD register." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="Node000002" href="$group___i_l_i9341___exported___functions.html#ga435f47c3f7c327325ea17f71fae7cebc" title="Writes register address." alt="" coords="180,5,310,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
+</map>

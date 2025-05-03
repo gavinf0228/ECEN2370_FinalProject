@@ -1,0 +1,7 @@
+<map id="initTimer" name="initTimer">
+<area shape="rect" id="Node000001" title="Initializes the timer peripheral." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="Node000002" href="$group___h_a_l___exported___functions___group2.html#ga47f2dd240b2aed823a76b11496f37690" title="Set new tick Freq." alt="" coords="125,5,250,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,16,109,16,109,21,77,21"/>
+<area shape="rect" id="Node000003" href="$group___h_a_l___exported___functions___group1.html#ga44d1542f9985b2243b14a41070cc41cc" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="298,5,395,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="251,16,282,16,282,21,251,21"/>
+</map>
